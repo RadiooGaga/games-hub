@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {font-family: "heavy_data"; src:url("./public/assets/fonts/heavy-data/heavy_data.ttf") format("truetype"); font-weight:lighter;font-style: normal;
+}
+
+:root {
+
+  --rtc--font-family-1: Arial, Helvetica, sans-serif;
+  --rtc--font-family-2: "heavy_data";
+  
+
+  --rtc--font-size-xxxl: 150px;
+  --rtc--font-size-xxl: 80px
+  --rtc--font-size-xl: 30px;
+  --rtc--font-size-l: 24px;
+  --rtc--font-size-m: 18px;
+  --rtc--font-size-ms: 14px;
+  --rtc--font-size-s: 12px;
+  --rtc--font-size-xs: 10px;
+
+
+  --rtc--padding-l: 30px;
+  --rtc--padding-m: 20px;
+  --rtc--padding-s: 10px;
+
+  --rtc--gap-l: 10px;
+  --rtc--gap-m: 6px;
+  --rtc--gap-s: 3px;
+}
+
+h1 {
+  width: 100%;
+  font-family: var(--rtc--font-family-2);
+  font-size: 80px;
+  padding: var(--rtc--padding-s);
+  color: aliceblue;
+}
+
+h4 {
+  color: aliceblue;
+}
+
+html {
+ width: 100%;
+ height: 100svh;
+}
+
+/*  ------------  ATENDER AL OVERFLOW CUANDO AÑADA COSAS ABAJO ----- */
+body {
+  overflow: hidden;
+}
+
+
+#headerDiv {
+  width: 100%;
+  height: 20svh;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding: var(--rtc--padding-m);
+  position: fixed;
+ 
+}
+
+#gamesDiv {
+  position: relative;
+  top: 190px;
+  z-index: 1;
+  width: 100%; 
+  height: 70svh;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--rtc--gap-l);
+  padding: var(--rtc--padding-m);
+  border: 3px solid black;
+  
+}
+
+.game1, .game2, .game3 {
+  width: 100%;
+  height:auto;
+  border: 3px solid black;
+  
+}
+
+
+#footerDiv {
+  width: 100%;
+  height: 10svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--rtc--padding-m);
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+ 
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+  h1 {
+    font-size: 33px;
+  }
+
+  #headerDiv {
+    height: 10svh;
+    padding: var(--rtc--padding-s);
+  }
+
+  #gamesDiv {
+    width: 100%;
+    height: auto;
+    top: 6.7em;
+    display: flex;
+    flex-direction: column;
+    padding: var(--rtc--padding-s);
+  }
+
+  .game1, .game2, .game3 {
+    width: 100%;
+    height: 280px;
+  }
+
+  #footerDiv {
+    height: 8svh;
+  }
+}
+
+
+@media screen and (min-width: 481px) and (max-width:768px){
+
+  h1 {
+    font-size: 33px;
+  }
+
+  #headerDiv {
+    height: 10svh;
+    padding: var(--rtc--padding-s);
+  }
+
+  #gamesDiv {
+    width: 100%;
+    height: auto;
+    top: 6.7em;
+    display: flex;
+    flex-direction: column;
+    padding: var(--rtc--padding-s);
+  }
+
+  .game1, .game2, .game3 {
+    width: 100%;
+    height: 280px;
+  }
+
+  #footerDiv {
+    height: 8svh;
+  }
+
+  
+}
+
+@media screen and (min-width: 769px) and (max-width:1023px){
+
+  h1 {
+    font-size: 60px;
+  }
+
+  #headerDiv {
+    height: 14svh;
+    padding: var(--rtc--padding-s);
+  }
+
+  #gamesDiv {
+    top: 10.7em;
+    display: flex;
+    flex-direction: column;
+    padding: var(--rtc--padding-s);
+  }
+
+  .game1, .game2, .game3 {
+    width: 100%;
+    height: 280px;
+  }
+
+  #footerDiv {
+    height: 6svh;
+    padding: var(--rtc--padding-s);
+  }
+
+}
+
+@media screen and (min-width:1024px) and (max-width:1279px) {
+
+}
+
+@media screen and (min-width:1280px) and (max-width:1439px) {
+
+}
