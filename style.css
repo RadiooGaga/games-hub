@@ -11,6 +11,11 @@
 
   --rtc--font-family-1: Arial, Helvetica, sans-serif;
   --rtc--font-family-2: "heavy_data";
+
+  --rtc--color-1: hsl(203, 75%, 44%);
+  --rtc--color-2: hsl(6, 74%, 62%);
+  --rtc--color-3: hsl(178, 63%, 38%);
+  --rtc--color-4: hsl(178, 63%, 70%);
   
 
   --rtc--font-size-xxxl: 150px;
@@ -32,21 +37,9 @@
   --rtc--gap-s: 3px;
 }
 
-h1 {
-  width: 100%;
-  font-family: var(--rtc--font-family-2);
-  font-size: 80px;
-  padding: var(--rtc--padding-s);
-  color: aliceblue;
-}
-
-h4 {
-  color: aliceblue;
-}
-
 html {
- width: 100%;
- height: 100svh;
+  max-width: 100%;
+  height: 100svh;
 }
 
 /*  ------------  ATENDER AL OVERFLOW CUANDO AÑADA COSAS ABAJO ----- */
@@ -55,35 +48,89 @@ body {
 }
 
 
+h1 {
+  width: 100%;
+  font-family: var(--rtc--font-family-2);
+  font-size: 50px;
+  padding: var(--rtc--padding-s);
+  color: aliceblue;
+}
+
+h4 {
+  color: aliceblue;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+
 #headerDiv {
   width: 100%;
-  height: 20svh;
+  height: 16svh;
   display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   padding: var(--rtc--padding-m);
   position: fixed;
- 
+  z-index: 1;
+
 }
 
 #gamesDiv {
-  position: relative;
-  top: 190px;
+  overflow: auto;
+  position: absolute;
+  top: 160px;
   z-index: 1;
   width: 100%; 
   height: 70svh;
   display: flex;
   justify-content: space-around;
   gap: var(--rtc--gap-l);
-  padding: var(--rtc--padding-m);
-  border: 3px solid black;
+  padding: 100px;
+  /*border: 3px solid black;*/
   
 }
 
-.game1, .game2, .game3 {
-  width: 100%;
-  height:auto;
-  border: 3px solid black;
+#game1, #game2, #game3  {
+  width: 30%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: var(--rtc--padding-m);
+  
+}
+
+#game1 {
+  border: 1px solid var(--rtc--color-1); 
+  box-shadow: 0 0 5px hsl(203, 75%, 44%), 0 0 15px hsl(203, 75%, 44%), 0 0 25px hsl(203, 75%, 44%), 0 0 100px hsl(203, 75%, 44%);
+}
+#game2 {
+  border: 1px solid var(--rtc--color-2);
+  box-shadow: 0 0 5px hsl(6, 74%, 62%), 0 0 15px hsl(6, 74%, 62%), 0 0 25px hsl(6, 74%, 62%), 0 0 100px hsl(6, 74%, 62%);
+}
+
+#game3 {
+  border: 1px solid var(--rtc--color-3);
+  box-shadow: 0 0 5px hsl(178, 63%, 38%), 0 0 15px hsl(178, 63%, 38%), 0 0 25px hsl(178, 63%, 38%), 0 0 100px hsl(178, 63%, 38%);
+}
+
+/*
+#game3 {
+  position: relative;
+  top: 29px;
+}
+*/
+
+.logo1, .logo2, .logo3 {
+  width: 90%;
+  object-fit: contain;
+  filter:grayscale(40%);
+}
+
+.logo1:hover, .logo2:hover, .logo3:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
   
 }
 
@@ -109,30 +156,41 @@ body {
 @media screen and (max-width: 480px) {
 
   h1 {
-    font-size: 33px;
+    font-size: 24px;
   }
 
   #headerDiv {
-    height: 10svh;
+    height: 9svh;
     padding: var(--rtc--padding-s);
   }
 
   #gamesDiv {
-    width: 100%;
-    height: auto;
-    top: 6.7em;
     display: flex;
     flex-direction: column;
-    padding: var(--rtc--padding-s);
+    justify-content: center;
+    align-items: center;
+    top: 85px;
+    height: 83svh;
+    gap: 60px;
+    padding: 10px;
   }
 
-  .game1, .game2, .game3 {
+  #game1, #game2, #game3 {
+    width: 80%;
+    height: 180px;
+  }
+
+
+  .logo1, .logo2, .logo3 {
     width: 100%;
-    height: 280px;
+    object-fit: contain;
   }
 
   #footerDiv {
-    height: 8svh;
+    height: 50px;
+    position: fixed;
+    z-index: 0;
+    padding: var(--rtc--padding-s);
   }
 }
 
@@ -140,7 +198,7 @@ body {
 @media screen and (min-width: 481px) and (max-width:768px){
 
   h1 {
-    font-size: 33px;
+    font-size: 35px;
   }
 
   #headerDiv {
@@ -149,51 +207,67 @@ body {
   }
 
   #gamesDiv {
-    width: 100%;
-    height: auto;
-    top: 6.7em;
     display: flex;
-    flex-direction: column;
-    padding: var(--rtc--padding-s);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: baseline;
+    align-items: center;
+    top: 70px;
+    height: 115svh;
+    gap: 60px;
+    padding: 80px 20px;
   }
 
-  .game1, .game2, .game3 {
+  #game1, #game2, #game3 {
+    width: 40%;
+    height: 235px;
+  }
+  .logo1, .logo2, .logo3 {
     width: 100%;
-    height: 280px;
-  }
-
-  #footerDiv {
-    height: 8svh;
-  }
-
-  
-}
-
-@media screen and (min-width: 769px) and (max-width:1023px){
-
-  h1 {
-    font-size: 60px;
-  }
-
-  #headerDiv {
-    height: 14svh;
-    padding: var(--rtc--padding-s);
-  }
-
-  #gamesDiv {
-    top: 10.7em;
-    display: flex;
-    flex-direction: column;
-    padding: var(--rtc--padding-s);
-  }
-
-  .game1, .game2, .game3 {
-    width: 100%;
-    height: 280px;
+    object-fit: contain;
   }
 
   #footerDiv {
     height: 6svh;
+    position: fixed;
+    z-index: 0;
+    padding: var(--rtc--padding-s);
+  }
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width:1023px){
+
+  h1 {
+    font-size: 40px;
+  }
+
+  #headerDiv {
+    height: 10svh;
+    padding: var(--rtc--padding-s);
+  }
+
+  #gamesDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    top: 85px;
+    height: 83svh;
+    gap: 55px;
+    padding: 80px 20px ;
+  }
+
+  #game1, #game2, #game3 {
+    width: 40%;
+    height: 300px;
+  }
+
+  #footerDiv {
+    height: 6svh;
+    position: fixed;
+    z-index: 0;
     padding: var(--rtc--padding-s);
   }
 
@@ -201,8 +275,88 @@ body {
 
 @media screen and (min-width:1024px) and (max-width:1279px) {
 
+  h1 {
+    font-size: 60px;
+    }
+  
+    h4 {
+      color: aliceblue;
+      font-size: 15px;
+      font-weight: 100;
+    }
+  
+  
+    #headerDiv {
+      display: flex;
+      justify-content: center;
+      height: 15svh;
+    }
+  
+    #gamesDiv {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      top: 70px;
+      height: 80svh;
+      gap: 50px;
+      padding: 80px 40px ;
+      
+    }
+
+    #game1, #game2, #game3 {
+      width: 100%;
+      height: 300px;
+    }
+  
+    .logo1, .logo2, .logo3 {
+      width: 95%;
+      object-fit: contain;
+    }
+
+    #footerDiv {
+      height: 7svh;
+      position: fixed;
+      z-index: 0;
+      padding: var(--rtc--padding-s);
+    }
 }
 
+
+
 @media screen and (min-width:1280px) and (max-width:1439px) {
+
+  h1 {
+  font-size: 80px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+
+  #headerDiv {
+    height: 20svh;
+  }
+
+  #gamesDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    height: 80svh;
+    gap: 60px;
+    padding: 90px 50px ;
+    
+  }
+
+  #game1, #game2, #game3 {
+    width: 100%;
+    height: 320px;
+  }
+
+  .logo1, .logo2, .logo3 {
+    width: 85%;
+    object-fit: contain;
+  }
 
 }
