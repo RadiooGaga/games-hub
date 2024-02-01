@@ -170,14 +170,14 @@ h4 {
     justify-content: center;
     align-items: center;
     top: 58px;
-    height: 87svh;
+    height: 85svh;
     gap: 40px;
     padding: 20px 30px;
   }
 
   #game1, #game2, #game3 {
     width: 95%;
-    height: 180px;
+    height: 160px;
     padding: 15px;
   }
 
@@ -188,7 +188,7 @@ h4 {
   }
 
   #footerDiv {
-    height: 50px;
+    height: 60px;
     position: fixed;
     z-index: 0;
     padding: var(--rtc--padding-s);
