@@ -156,11 +156,11 @@ h4 {
 @media screen and (max-width: 480px) {
 
   h1 {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   #headerDiv {
-    height: 9svh;
+    height: 8svh;
     padding: var(--rtc--padding-s);
   }
 
@@ -169,15 +169,15 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 85px;
-    height: 77svh;
+    top: 5em;
+    height: 85svh;
     gap: 25px;
     padding: 10px;
   }
 
   #game1, #game2, #game3 {
     width: 80%;
-    height: 180px;
+    height: 200px;
   }
 
 
@@ -198,11 +198,11 @@ h4 {
 @media screen and (min-width: 481px) and (max-width:768px){
 
   h1 {
-    font-size: 35px;
+    font-size: 38px;
   }
 
   #headerDiv {
-    height: 10svh;
+    height: 7svh;
     padding: var(--rtc--padding-s);
   }
 
@@ -212,15 +212,15 @@ h4 {
     justify-content: center;
     align-content: baseline;
     align-items: center;
-    top: 70px;
-    height: 115svh;
-    gap: 60px;
-    padding: 80px 20px;
+    top: 80px;
+    height: 86svh;
+    gap: 50px;
+    padding: 30px 20px;
   }
 
   #game1, #game2, #game3 {
-    width: 40%;
-    height: 235px;
+    width: 70%;
+    height: 320px;
   }
   .logo1, .logo2, .logo3 {
     width: 100%;
@@ -240,23 +240,23 @@ h4 {
 @media screen and (min-width: 769px) and (max-width:1023px){
 
   h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   #headerDiv {
-    height: 10svh;
+    height: 9svh;
     padding: var(--rtc--padding-s);
   }
 
   #gamesDiv {
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content:space-evenly;
     align-items: center;
-    top: 45px;
-    height: 89svh;
-    gap: 55px;
-    padding: 80px 20px ;
+    top: 100px;
+    height: 82svh;
+    gap: 20px;
+    padding: 30px ;
   }
 
   #game1, #game2, #game3 {
@@ -276,7 +276,7 @@ h4 {
 @media screen and (min-width:1024px) and (max-width:1279px) {
 
   h1 {
-    font-size: 60px;
+    font-size: 50px;
     }
   
     h4 {
@@ -289,22 +289,24 @@ h4 {
     #headerDiv {
       display: flex;
       justify-content: center;
-      height: 15svh;
+      height: 10svh;
     }
   
     #gamesDiv {
+      width: 100%;
       display: flex;
-      justify-content:center;
+      flex-wrap: wrap;
+      justify-content:space-evenly;
       align-items: center;
       top: 100px;
-      height: 100svh;
-      gap: 50px;
-      padding: 80px 40px ;
+      height: 82svh;
+      gap: 20px;
+      padding: 20px 40px;
       
     }
 
     #game1, #game2, #game3 {
-      width: 100%;
+      width: 40%;
       height: 300px;
     }
   
