@@ -198,11 +198,11 @@ h4 {
 @media screen and (min-width: 481px) and (max-width:768px){
 
   h1 {
-    font-size: 38px;
+    font-size: 42px;
   }
 
   #headerDiv {
-    height: 7svh;
+    height: 11svh;
     padding: var(--rtc--padding-s);
   }
 
@@ -212,15 +212,15 @@ h4 {
     justify-content: center;
     align-content: baseline;
     align-items: center;
-    top: 80px;
-    height: 86svh;
-    gap: 50px;
+    top: 115px;
+    height: 80svh;
+    gap: 60px;
     padding: 30px 20px;
   }
 
   #game1, #game2, #game3 {
-    width: 70%;
-    height: 320px;
+    width: 80%;
+    height: 280px;
   }
   .logo1, .logo2, .logo3 {
     width: 100%;
