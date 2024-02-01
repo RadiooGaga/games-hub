@@ -156,7 +156,7 @@ h4 {
 @media screen and (max-width: 480px) {
 
   h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   #headerDiv {
@@ -169,15 +169,16 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 5em;
+    top: 74px;
     height: 85svh;
-    gap: 25px;
-    padding: 10px;
+    gap: 35px;
+    padding: 20px 30px;
   }
 
   #game1, #game2, #game3 {
     width: 80%;
-    height: 200px;
+    height: 180px;
+    padding: 15px;
   }
 
 
@@ -214,13 +215,13 @@ h4 {
     align-items: center;
     top: 80px;
     height: 85svh;
-    gap: 60px;
+    gap: 40px;
     padding: 30px 20px;
   }
 
   #game1, #game2, #game3 {
-    width: 80%;
-    height: 280px;
+    width: 70%;
+    height: 200px;
   }
   .logo1, .logo2, .logo3 {
     width: 100%;
