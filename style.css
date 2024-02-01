@@ -160,7 +160,7 @@ h4 {
   }
 
   #headerDiv {
-    height: 9svh;
+    height: 6svh;
     padding: var(--rtc--padding-s);
   }
 
@@ -169,15 +169,15 @@ h4 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 90px;
-    height: 80svh;
+    top: 5px;
+    height: 100svh;
     gap: 40px;
     padding: 20px 30px;
   }
 
   #game1, #game2, #game3 {
-    width: 90%;
-    height: 150px;
+    width: 70%;
+    height: 175px;
     padding: 15px;
   }
 
