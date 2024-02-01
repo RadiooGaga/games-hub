@@ -198,11 +198,11 @@ h4 {
 @media screen and (min-width: 481px) and (max-width:768px){
 
   h1 {
-    font-size: 42px;
+    font-size: 35px;
   }
 
   #headerDiv {
-    height: 11svh;
+    height: 8svh;
     padding: var(--rtc--padding-s);
   }
 
@@ -212,8 +212,8 @@ h4 {
     justify-content: center;
     align-content: baseline;
     align-items: center;
-    top: 115px;
-    height: 80svh;
+    top: 80px;
+    height: 85svh;
     gap: 60px;
     padding: 30px 20px;
   }
