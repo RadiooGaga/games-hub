@@ -156,28 +156,28 @@ h4 {
 @media screen and (max-width: 480px) {
 
   h1 {
-    font-size: 23px;
+    font-size: 28px;
   }
 
   #headerDiv {
-    height: 6svh;
+    height: 8svh;
     padding: var(--rtc--padding-s);
   }
 
   #gamesDiv {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    top: 5px;
-    height: 100svh;
-    gap: 40px;
-    padding: 20px 30px;
+    top: 70px;
+    height: 85svh;
+    gap: 50px;
+    padding: 30px 25px 60px 25px;
   }
 
   #game1, #game2, #game3 {
-    width: 70%;
-    height: 175px;
+    width: 83%;
+    height: 200px;
     padding: 15px;
   }
 
@@ -190,7 +190,8 @@ h4 {
   #footerDiv {
     height: 60px;
     position: fixed;
-    z-index: 0;
+    z-index: 1;
+    background-color: black;
     padding: var(--rtc--padding-s);
   }
 }
