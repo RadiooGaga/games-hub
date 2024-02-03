@@ -10,14 +10,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
-        bigote: "true",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: true,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "negro",
-        estilo: "rizado",
-        calvo: "false"
+        estilo: "liso",
+        calvo: false,
+        visible: true
     },
     {
         id: "Anita",
@@ -27,14 +28,15 @@ const characters = [
         ojos: "azules",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "true",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: true,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "rubio",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Peter",
@@ -44,14 +46,15 @@ const characters = [
         ojos: "azules",
         nariz: "grande",
         boca: "grande",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "blanco",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Eric",
@@ -61,14 +64,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "true",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: true,
+        gafas: false,
         pelo: "rubio",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Charles",
@@ -78,14 +82,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
-        bigote: "true",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: true,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "rubio",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Sam",
@@ -95,14 +100,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "true",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: true,
         pelo: "blanco",
         estilo: "liso",
-        calvo: "true"
+        calvo: true,
+        visible: true
     },
     {
         id: "Joe",
@@ -112,14 +118,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "true",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: true,
         pelo: "rubio",
         estilo: "rizado",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Maria",
@@ -129,14 +136,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "true",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: true,
+        gafas: false,
         pelo: "castaño",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Phillip",
@@ -146,14 +154,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
-        bigote: "false",
-        rubor: "true",
-        barba: "true",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: true,
+        barba: true,
+        sombrero: false,
+        gafas: false,
         pelo: "negro",
         estilo: "rizado",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Richard",
@@ -163,14 +172,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "true",
-        rubor: "false",
-        barba: "true",
-        sombrero: "false",
-        gafas: "false",
+        bigote: true,
+        rubor: false,
+        barba: true,
+        sombrero: false,
+        gafas: false,
         pelo: "castaño",
         estilo: "liso",
-        calvo: "true"
+        calvo: true,
+        visible: true
     },
     {
         id: "Susan",
@@ -180,14 +190,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "blanco",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Max",
@@ -197,14 +208,15 @@ const characters = [
         ojos: "marrones",
         nariz: "grande",
         boca: "grande",
-        bigote: "true",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: true,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "castaño",
         estilo: "rizado",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Alfred",
@@ -214,14 +226,15 @@ const characters = [
         ojos: "azules",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "true",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: true,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "pelirrojo",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Robert",
@@ -231,14 +244,15 @@ const characters = [
         ojos: "azules",
         nariz: "grande",
         boca: "grande",
-        bigote: "false",
-        rubor: "true",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: true,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "castaño",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Frans",
@@ -248,14 +262,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "pelirrojo",
         estilo: "rizado",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Claire",
@@ -265,14 +280,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "true",
-        gafas: "true",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: true,
+        gafas: true,
         pelo: "pelirrojo",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Paul",
@@ -282,14 +298,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "true",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: true,
         pelo: "blanco",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Bill",
@@ -299,14 +316,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "true",
-        barba: "true",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: true,
+        barba: true,
+        sombrero: false,
+        gafas: false,
         pelo: "pelirrojo",
         estilo: "liso",
-        calvo: "true"
+        calvo: true,
+        visible: true
     },
     {
         id: "David",
@@ -316,14 +334,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
-        bigote: "false",
-        rubor: "false",
-        barba: "true",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: true,
+        sombrero: false,
+        gafas: false,
         pelo: "rubio",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Bernard",
@@ -333,14 +352,15 @@ const characters = [
         ojos: "marrones",
         nariz: "grande",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "true",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: true,
+        gafas: false,
         pelo: "castaño",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "George",
@@ -350,14 +370,15 @@ const characters = [
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "true",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: true,
+        gafas: false,
         pelo: "blanco",
         estilo: "liso",
-        calvo: "false"
+        calvo: false,
+        visible: true
     },
     {
         id: "Tom",
@@ -367,14 +388,15 @@ const characters = [
         ojos: "azules",
         nariz: "pequeña",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "true",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: true,
         pelo: "negro",
         estilo: "liso",
-        calvo: "true"
+        calvo: true,
+        visible: true
     },
     {
         id: "Herman",
@@ -384,14 +406,15 @@ const characters = [
         ojos: "marrones",
         nariz: "grande",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "pelirrojo",
         estilo: "rizado",
-        calvo: "true"
+        calvo: true,
+        visible: true
     },
     {
         id: "Anne",
@@ -401,19 +424,20 @@ const characters = [
         ojos: "marrones",
         nariz: "grande",
         boca: "pequeña",
-        bigote: "false",
-        rubor: "false",
-        barba: "false",
-        sombrero: "false",
-        gafas: "false",
+        bigote: false,
+        rubor: false,
+        barba: false,
+        sombrero: false,
+        gafas: false,
         pelo: "negro",
         estilo: "rizado",
-        calvo: "false"
+        calvo: false,
+        visible: true
     }
 ]
 
 
-const facialButtons = [
+const features = [
 
     {
         id: 0,
@@ -488,35 +512,35 @@ const facialButtons = [
     {
         id: 10,
         atributo: "bigote",
-        valor: "true",
+        valor: true,
         img: "./public/assets/atributos/bigote.png"
 
     },
     {
         id: 11,
         atributo: "rubor",
-        valor: "true",
+        valor: true,
         img: "./public/assets/atributos/rubor.png"
 
     },
     {
         id: 12,
         atributo: "barba",
-        valor: "true",
+        valor: true,
         img: "./public/assets/atributos/barba.png"
 
     },
     {
         id: 13,
         atributo: "sombrero",
-        valor: "true",
+        valor: true,
         img: "./public/assets/atributos/sombrero.png"
 
     },
     {
         id: 14,
         atributo: "gafas",
-        valor: "true",
+        valor: true,
         img: "./public/assets/atributos/gafas.png"
 
     },
@@ -572,13 +596,11 @@ const facialButtons = [
     {
         id: 22,
         atributo: "calvo",
-        valor: "true",
+        valor: true,
         img: "./public/assets/atributos/calvo.jpeg"
 
     },
 ]
-
-
 
 
 export const guessWhoGame = (parentDiv) => {
@@ -589,33 +611,147 @@ export const guessWhoGame = (parentDiv) => {
     atributtes.id = "atributtes";
 
     parentDiv.appendChild(guessWhoDiv);
-  
+    const chosenCharacter = characters[Math.floor(Math.random() * characters.length)]
+    
    
-
    
     for (const character of characters) {
 
         const characterDiv = document.createElement("div");
-        characterDiv.id = "characterDiv";
+        characterDiv.id = character.id;
         const characterImg = document.createElement("img");
         characterImg.src = character.img;
 
         guessWhoDiv.appendChild(characterDiv);
         characterDiv.appendChild(characterImg);
-        
+
     }
 
-    for (const facialButton of facialButtons) {
 
-        const uniqueFacialAtributte = document.createElement("button");
-        uniqueFacialAtributte.id = "facialButton";
-        const facialImg = document.createElement("img");
-        facialImg.src = facialButton.img;
+    for (const feature of features) {
+    
+        const featureButton = document.createElement("button");
+        featureButton.id = feature.id;
+        const featureImg = document.createElement("img");
+        featureImg.src = feature.img;
+
+        
 
         guessWhoDiv.appendChild(atributtes);
-        atributtes.appendChild(uniqueFacialAtributte);
-        uniqueFacialAtributte.appendChild(facialImg);
+        atributtes.appendChild(featureButton);
+        featureButton.appendChild(featureImg);
+
+        const featureButtonClickHandler = (e) => {
+    
+            featureButton.style.filter = "opacity(50%)";  
+            filtrarPersonaje(characters, feature.atributo, feature.valor, chosenCharacter);
+            atributosDisponibles(characters, features);
+            featureButton.removeEventListener("click", featureButtonClickHandler);
+            congrats(chosenCharacter)
+        }
+        featureButton.onclick = featureButtonClickHandler;
+    }
+    
+}
+
+
+
+const filtrarPersonaje = (characters, atributo, valor, chosenCharacter) => {
+   
+    for (const character of characters) {
+
+
+        if (chosenCharacter[atributo] === valor) {
+            if (character[atributo] !== valor) {
+                const greyCharacter = document.getElementById(character.id)
+                greyCharacter.style.filter = "opacity(30%)";
+                character.visible = false; 
+            }
+
+
+            
+        } else {
+            if (character[atributo] === valor) {
+                const greyCharacter = document.getElementById(character.id)
+                greyCharacter.style.filter = "opacity(30%)";
+                character.visible = false;
+            }
+        } 
+    }
+    
+}
+
+
+
+
+
+const atributosDisponibles = (characters, features) => {
+    
+    const listaDeAtributos =   {
         
+        genero: [],
+        estado: [],
+        ojos: [],
+        nariz: [],
+        boca: [],
+        bigote: [],
+        rubor: [],
+        barba: [],
+        sombrero: [],
+        gafas: [],
+        pelo: [],
+        estilo: [],
+        calvo: []
+    
+    }
+
+    
+  
+
+    for (const character of characters) {
+        if (character.visible === true) {
+            for (const key of Object.keys(listaDeAtributos)) {
+                listaDeAtributos[key].push(character[key])  
+            } 
+        }
+    }
+
+
+
+    for (const key of Object.keys(listaDeAtributos)) {
+        listaDeAtributos[key] = [...new Set(listaDeAtributos[key])]
+        
+        
+        if (listaDeAtributos[key].length <= 1) {
+           for (const feature of features) {
+          
+                if (feature.atributo === key) {
+                    const greyFeature = document.getElementById(feature.id)
+                        greyFeature.style.filter = "opacity(30%)";
+                        greyFeature.onclick = null;
+                        
+                }
+                    
+           }
+            
+        }
+    }
+}
+
+
+
+
+const congrats = (character) => {
+    let counter = 0;
+    for (const character of characters) {
+        if (character.visible === true) {
+            counter += 1;
+            
+        }
+    }
+    
+    if (counter === 1) {
+    console.log(`congrats! the character is ${character.id}`)
     }
     
 }

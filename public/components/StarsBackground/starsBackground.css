@@ -1,7 +1,37 @@
 html {
     background: radial-gradient(ellipse at center, #1b2735 0%, #090a0f 100%);
   }
-  
+/*
+  #galaxia1 {
+    display: flex;
+    width: 40%;
+    background: transparent;
+    position: absolute;
+   
+  }
+
+  #galaxia1 > img {
+    align-self: flex-end;
+    width: 100%;
+    filter: brightness(70%);
+   
+  }
+
+  #galaxia2 {
+    width: 500px;
+    display: flex;
+    justify-content: end;
+    background: transparent;
+    position: absolute;
+   
+  }
+
+  #galaxia2 > img {
+    width: 100%;
+    rotate: 15deg;
+    filter: brightness(50%);
+  }
+  */
   #stars {
     width: 1px;
     height: 1px;
@@ -511,6 +541,49 @@ html {
       494px 1957px #fff, 1296px 431px #fff, 175px 1507px #fff, 831px 121px #fff,
       498px 1947px #fff, 617px 880px #fff, 240px 403px #fff;
   
+  }
+
+  @media screen and (max-width: 480px) { 
+    #galaxia1 {
+      width: 500px;
+      height: 100svh;
+     
+      background: transparent;
+      
+    }
+  
+    #galaxia1 > img {
+      width: 100%;
+      filter: brightness(60%);
+      rotate: 50deg;
+    }
+  
+    #galaxia2 {
+      width: 500px;
+      height: 100svh;
+    
+      background: transparent;
+      
+    }
+  
+    #galaxia2 > img {
+      width: 100%;
+      rotate: 15deg;
+      filter: brightness(50%);
+    }
+  } 
+    
+  @media screen and (min-width: 481px) and (max-width:768px){
+  }
+    
+  @media screen and (min-width: 769px) and (max-width:1023px) {    
+  }
+    
+  @media screen and (min-width:1024px) and (max-width:1279px) { 
+  }
+    
+  @media screen and (min-width:1280px) and (max-width:1439px) {
+   
   }
 
   /*@keyframes animStar {

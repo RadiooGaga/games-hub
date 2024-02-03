@@ -29,7 +29,7 @@
     background-color: rgb(246, 147, 162);
 }
 
-#facialButton {
+#atributtes > button {
     border-radius: 10px;
     width: 60px;
     height: 60px;
@@ -39,10 +39,14 @@
 
 }
 
-#facialButton > img {
+#atributtes > button > img {
     width: 100%;
     object-fit: cover;
     padding: 10px;
+}
+
+#atributtes > button:hover {
+    cursor: pointer;
 }
 
 #characterDiv {
