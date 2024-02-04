@@ -1,7 +1,6 @@
 import './style.css';
 import './public/components/StarsBackground/starsBackground.css';
 import { cleanSheetAndOpenGame, printGamesCards } from './public/components/tools/tools.js';
-import { backToGames } from './public/components/tools/tools.js';
 import {guessWhoGame} from './public/components/game2/game2.js';
 
 

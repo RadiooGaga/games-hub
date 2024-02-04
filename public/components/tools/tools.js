@@ -1,8 +1,8 @@
-import { guessWhoGame } from '../game2/game2';
+
 import './tools.css';
 
 
-// FUNCIÓN PINTAR LAS TARJETAS DEL MENU
+// PINTAR LAS TARJETAS DEL MENU
 
 export const printGamesCards = (parentDiv, games) => {
 
@@ -28,19 +28,18 @@ export const cleanSheetAndOpenGame = (parentDiv, card, games, gameCreate) => {
 
     card.addEventListener("click", () => {
     parentDiv.innerHTML = "";
-    //gameCreate("hola que ase");
     backToGames(parentDiv, games)
-    gameCreate(parentDiv)
+    resetGame(parentDiv, gameCreate, games)
+    gameCreate(parentDiv);
 
     })
-
 }
 
 
 
 // BOTÓN LLEVARTE DE VUELTA A MENU JUEGOS
 
-export const backToGames = (parentDiv, games) => {
+const backToGames = (parentDiv, games) => {
    
     const backButton = document.createElement("button");
     backButton.id = "backButton";
@@ -55,9 +54,23 @@ export const backToGames = (parentDiv, games) => {
    
 }
 
+// BOTÓN DE RESET GAME
 
-/*
-export const funcion = (texto) => {
-    console.log(texto);
+const resetGame = (parentDiv, game, games) => {
+    const buttonToGame= document.createElement("button");
+    buttonToGame.className = "backToGameButton";
+    buttonToGame.textContent = "REINICIAR";
+
+    parentDiv.appendChild(buttonToGame)
+  
+    buttonToGame.addEventListener("click", () => {
+        parentDiv.innerHTML = "";
+        backToGames(parentDiv, games);
+        resetGame(parentDiv, game, games)
+        game(parentDiv);   
+        
+    })
+   
 }
-*/
+
+
