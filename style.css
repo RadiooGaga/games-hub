@@ -83,7 +83,7 @@ h4 {
   top: 110px;
   z-index: 1;
   width: 100%; 
-  height: 80svh;
+  height: 82svh;
   display: flex;
   justify-content: space-around;
   gap: var(--rtc--gap-l);
@@ -138,7 +138,7 @@ h4 {
 
 #footerDiv {
   width: 100%;
-  height: 8svh;
+  height: 7svh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,7 +172,7 @@ h4 {
   #gamesDiv {
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content:center;
     align-items: center;
     top: 70px;
     height: 90svh;
@@ -341,15 +341,15 @@ h4 {
 @media screen and (min-width:1280px) and (max-width:1439px) {
 
   h1 {
-  font-size: 60px;
+  font-size: 40px;
   }
 
   h4 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   #headerDiv {
-    height: 12svh;
+    height: 10svh;
   }
 
   #gamesDiv {
@@ -357,9 +357,9 @@ h4 {
     justify-content: center;
     align-items: center;
     top: 5em;
-    height: 90svh;
+    height: 80svh;
     gap: 60px;
-    padding: 90px 50px ;
+    padding: 20px 40px;
     
   }
 
@@ -374,7 +374,7 @@ h4 {
   }
 
   #footerDiv {
-    height: 5svh;
+    height: 8svh;
     position: fixed;
     z-index: 0;
     padding: var(--rtc--padding-s);
