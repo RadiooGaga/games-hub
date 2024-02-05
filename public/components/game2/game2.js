@@ -610,6 +610,8 @@ export const guessWhoGame = (parentDiv) => {
 
     const guessWhoDiv = document.createElement("div");
     guessWhoDiv.id = "guessWhoDiv";
+    const people = document.createElement("div");
+    people.className = "people";
     const atributtes = document.createElement("div");
     atributtes.id = "atributtes";
     parentDiv.appendChild(guessWhoDiv);
@@ -623,7 +625,8 @@ export const guessWhoGame = (parentDiv) => {
         const characterImg = document.createElement("img");
         characterImg.src = character.img;
 
-        guessWhoDiv.appendChild(characterDiv);
+        guessWhoDiv.appendChild(people);
+        people.appendChild(characterDiv);
         characterDiv.appendChild(characterImg); 
     }
 
@@ -740,11 +743,15 @@ const congrats = (parentDiv, character) => {
     if (counter === 1) {
         const divWinner = document.getElementById("guessWhoDiv");
         divWinner.innerHTML = "";
-        divWinner.textContent = `ENHORABUENA! El personaje es "${character.id}"`;
+        divWinner.classList.add("divWinner");
+        const divWinnerP = document.createElement("p");
+        divWinnerP.className = "divWinnerParagraph";
+        divWinnerP.textContent = `ENHORABUENA! El personaje es "${character.id}"`;
         const imgWinner = document.createElement("img");
         imgWinner.src = character.img;
 
         parentDiv.appendChild(divWinner);
+        divWinner.appendChild(divWinnerP);
         divWinner.appendChild(imgWinner);
     }
     

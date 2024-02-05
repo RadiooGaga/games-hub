@@ -1,38 +1,48 @@
 
 #guessWhoDiv {
-    width: 90%;
+    width: 95%;
     height: auto;
     position: absolute;
-    top: 7em;
+    top: 8em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
     gap: 20px;
-    padding: 20px;
+    padding: 10px 10px 30px;
     background-color: rgb(242, 223, 226);
     
 }
 
+.people {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 20px 10px 20px;
+}
+
 #atributtes {
-    width: 100%;
-    position: relative;
+    width: 80%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 25px;
-    padding: 20px;
-    background-color: rgb(246, 147, 162);
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: rgba(246, 147, 162, 0.434);
 }
 
 #atributtes > button {
     border-radius: 10px;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border: none;
     background-color: white;
     box-shadow: 9px 7px 5px 3px rgb(134, 79, 87);
@@ -49,33 +59,23 @@
     cursor: pointer;
 }
 
-#characterDiv {
-    width: auto;
-    
+
+.divWinner > img {
+    width: 15%;
 }
 
-#characterDiv > img {
-    width: 100%;
-    object-fit: contain;
-}
-
-#divWinner {
+.divWinnerParagraph {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 80%;
-    position: absolute;
-}
-
-#divWinner > img {
-    width: 100%;
-    object-fit: contain;
+    text-align: center;
+    font-family: var(--rtc--font-family-2);
+    font-size: 20px;
 }
 
 #backButton {
     position: absolute;
-    top: 1em;
+    left: 6em;
+    top: 2em;
     font-family: var(--rtc--font-family-2);
     font-size: 18px;
     padding: 18px 30px;
@@ -85,8 +85,8 @@
 
 .backToGameButton {
     position: absolute;
-    right: 3em;
-    top: 1em;
+    right: 6em;
+    top: 2em;
     font-family: var(--rtc--font-family-2);
     font-size: 18px;
     padding: 18px 30px;
@@ -95,9 +95,7 @@
 }
 
 #backButton:hover, .backToGameButton:hover {
-
     cursor: pointer;
-
 }
 
 
@@ -105,25 +103,86 @@
 
 
     #guessWhoDiv {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 4em;
+        width: 95%;
+        top: 4.5em;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
         align-content: center;
+        padding: 5px 5px 15px;
         gap: 10px;
-        padding: 10px;
         background-color: rgb(242, 223, 226);
         
     }
 
+    .people {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 75%;
+        height: auto;
+        padding: 5px;
+    }
+
+    .people > div {
+        width: 30%;
+    }
+
+    .people > div > img {
+        width: 100%;
+    }
+
+    #atributtes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 20%;
+        height: auto;
+        padding: 5px 10px 5px 5px;
+    }
+
+    #atributtes > button {
+        width: 40px;
+        height: 40px;
+    }
+
+    #atributtes > button > img {
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        object-fit: contain;
+    }
+   
+
     #backButton {
         font-size: 12px;
+        left: 20px;
         position: absolute;
         padding: 12px 10px;
-        top: 0em;
+        top: 1em;
+    }
+
+    .backToGameButton {
+        position: absolute;
+        right: 20px;
+        top: 1em;
+        font-size: 12px;
+        padding: 12px 10px;
+    }
+
+
+    .divWinner > img {
+        width: 30%;
+        padding: 10px 10px 20px;
+    }
+
+    .divWinnerParagraph {
+        font-size: 18px;
+        padding: 20px 10px 10px;
     }
 
 }
@@ -132,27 +191,83 @@
 @media screen and (min-width: 481px) and (max-width:768px){
 
     #guessWhoDiv {
-        width: 100%;
+        width: 95%;
+        top: 4.5em;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: start;
+        align-content: center;
+        padding: 5px 5px 15px;
+        gap: 10px;
+        
+    }
+
+    .people {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 74%;
         height: auto;
-        position: absolute;
-        top: 5em;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .people > div {
+        width: 100px;
+    }
+
+    .people > div > img {
+        width: 100%;
+    }
+
+    #atributtes {
+        width: 23%;
+        height: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        align-content: center;
-        gap: 10px;
-        padding: 10px;
-        background-color: rgb(242, 223, 226);
-        
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 10px 20px 5px;
     }
+
+    #atributtes > button {
+        width: 55px;
+        height: 55px;
+    }
+   
 
     #backButton {
         font-size: 14px;
         position: absolute;
         padding: 14px 12px;
         top: 1em;
+        left: 20px;
     }
-  
+
+    .backToGameButton {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        font-size: 14px;
+        padding: 14px 22px;
+        
+    }
+
+    .divWinner > img {
+        width: 30%;
+        padding: 10px 10px 20px;
+    }
+
+    .divWinnerParagraph {
+        font-size: 18px;
+        padding: 20px 10px 10px;
+    }
   
 }
   
@@ -161,34 +276,161 @@
 @media screen and (min-width: 769px) and (max-width:1023px){
 
     #guessWhoDiv {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 8em;
+        width: 95%;
+        top: 5.5em;
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: center;
-        align-items: center;
+        align-items: start;
         align-content: center;
+        padding: 5px 5px 15px;
         gap: 10px;
-        padding: 10px;
-        background-color: rgb(242, 223, 226);
         
     }
+
+    .people {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 70%;
+        height: auto;
+        gap: 10px;
+        padding: 10px 5px;
+    }
+
+    .people > div {
+        width: 100px;
+    }
+
+    .people > div > img {
+        width: 100%;
+    }
+
+    #atributtes {
+        width: 24%;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 10px 20px 5px;
+    }
+
+    #atributtes > button {
+        width: 60px;
+        height: 60px;
+    }
+   
 
     #backButton {
         font-size: 16px;
         position: absolute;
         padding: 16px 14px;
-        top: 2.5em;
+        top: 1em;
+        left: 20px;
+    }
+
+    .backToGameButton {
+        position: absolute;
+        right: 2em;
+        top: 1em;
+        font-size: 16px;
+        padding: 16px 20px;
+        
     }
   
-    
   
 }
   
+    
+  
+
+  
 @media screen and (min-width:1024px) and (max-width:1279px) {
   
-   
+    #guessWhoDiv {
+        width: 95%;
+        height: auto;
+        position: absolute;
+        top: 5em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
+        padding: 10px 10px 30px;
+        
+    }
+    
+    .people {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 20px 10px 20px;
+    }
+
+    .people > div {
+        width: 90px;
+    }
+
+    .people > div > img {
+        width: 100%;
+    }
+    
+    #atributtes {
+        width: 95%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 5px 0px 10px;
+       
+    }
+    
+    #atributtes > button {
+        width: 55px;
+        height: 55px;
+    }
+    
+    #atributtes > button > img {
+        width: 100%;
+        object-fit: cover;
+        padding: 10px;
+    }
+    
+    
+    #backButton {
+        position: absolute;
+        left: 30px;
+        top: 1em;
+        font-family: var(--rtc--font-family-2);
+        font-size: 12px;
+        padding: 16px 28px;
+        
+    }
+    
+    .backToGameButton {
+        position: absolute;
+        right: 30px;
+        top: 1em;
+        font-family: var(--rtc--font-family-2);
+        font-size: 12px;
+        padding: 16px 28px;
+       
+    }  
   
       
 }
@@ -198,19 +440,68 @@
 @media screen and (min-width:1280px) and (max-width:1439px) {
   
     #guessWhoDiv {
-        width: 70%;
+        width: 95%;
+        top: 3.5em;
+        padding: 5px 5px 10px;
+    }
+
+    .people {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px 5px 0px;
+    }
+
+    .people > div {
+        width: 80px;
+    }
+
+    .people > div > img {
+        width: 100%;
+    }
+
+    #atributtes {
+        width: 95%;
+        padding: 10px 5px 20px;
+    }
+
+    #atributtes > button {
+        width: 50px;
+        height: 50px;
+    }
+
+    #divWinner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
         position: absolute;
-        top: 12em;
-        
+    }
+
+    #divWinner > img {
+        width: 100%;
+        object-fit: cover;
     }
 
     #backButton {
-        font-size: 16px;
         position: absolute;
-        top: 6em;
+        left: 40px;
+        top: 0em;
+        font-size: 16px;
+        padding: 12px 20px;
+      
     }
-  
-   
+
+    .backToGameButton {
+        position: absolute;
+        right: 40px;
+        top: 0em;
+        font-size: 16px;
+        padding: 12px 20px;
+       
+    }
+
   
 }
 
