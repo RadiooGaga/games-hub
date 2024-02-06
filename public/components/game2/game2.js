@@ -1,8 +1,5 @@
 import "./game2.css";
 
-
-
-
 const characters = [
     {
         id: "Alex",
@@ -438,7 +435,6 @@ const characters = [
     }
 ]
 
-
 const features = [
 
     {
@@ -604,8 +600,12 @@ const features = [
     },
 ]
 
+const attempt = {intentos: 0};
 
-// creando quien es quien
+
+
+
+// CREANDO QUIEN ES QUIEN
 export const guessWhoGame = (parentDiv) => {
 
     const guessWhoDiv = document.createElement("div");
@@ -615,10 +615,12 @@ export const guessWhoGame = (parentDiv) => {
     const atributtes = document.createElement("div");
     atributtes.id = "atributtes";
     parentDiv.appendChild(guessWhoDiv);
-    const chosenCharacter = characters[Math.floor(Math.random() * characters.length)]
+    const chosenCharacter = characters[Math.floor(Math.random() * characters.length)] //personaje random
+
     
-   
-    for (const character of characters) { //personajes
+   attempt.intentos = 5; //reinicio de contador libre.
+
+    for (const character of characters) { 
         character.visible = true;
         const characterDiv = document.createElement("div");
         characterDiv.id = character.id;
@@ -642,12 +644,12 @@ export const guessWhoGame = (parentDiv) => {
         atributtes.appendChild(featureButton);
         featureButton.appendChild(featureImg);
 
-        const featureButtonClickHandler = (e) => {
+        const featureButtonClickHandler = (e) => { //Desde aquí ocurre todo: ("click")
             featureButton.style.filter = "opacity(50%)"; 
             checkCharacter(characters, feature.atributo, feature.valor, chosenCharacter);
             featureButton.removeEventListener("click", featureButtonClickHandler);
             eraseUnavailableFeature(characters, features);
-            congrats(parentDiv,chosenCharacter);
+            congrats(parentDiv,chosenCharacter, attempt);
             
         }
         featureButton.onclick = featureButtonClickHandler;
@@ -655,8 +657,10 @@ export const guessWhoGame = (parentDiv) => {
 }
 
 
-// comprobar en los personajes si el atributo y el valor coinciden con el personaje elegido 
-// por la máquina.
+
+/* comprobar en los personajes si el atributo y el valor coinciden con el personaje elegido 
+ por la máquina */
+
 const checkCharacter = (characters, atributo, valor, chosenCharacter) => {
 
     for (const character of characters) {
@@ -682,7 +686,9 @@ const checkCharacter = (characters, atributo, valor, chosenCharacter) => {
 }
 
 
-// eliminar los botones que no tiene sentido que estén disponibles
+
+// borrado de botones que no tiene sentido que estén disponibles
+
 const eraseUnavailableFeature = (characters, features) => {
 
     const listOfAtributes = { 
@@ -700,16 +706,20 @@ const eraseUnavailableFeature = (characters, features) => {
         estilo: [],
         calvo: []
     }
-    const newListOfAtributes = Object.keys(listOfAtributes);
+    const newListOfAtributes = Object.keys(listOfAtributes); 
+    // nuevo array de atributos únicos disponibles aislados
 
 
     for (const character of characters) {
         if (character.visible === true) {
             for ( const atribute of newListOfAtributes) {  
                 listOfAtributes[atribute].push(character[atribute]);
+                //console.log(character[atribute])
+                //console.log(listOfAtributes[atribute])
             }
         }
-    }
+    } //Si el personaje es visible, recorremos los atributos y añadimos el personaje con 
+     //los atributos coincidentes a la nueva lista.
 
     
     for (const atribute of newListOfAtributes) { 
@@ -730,17 +740,27 @@ const eraseUnavailableFeature = (characters, features) => {
 
 
 
-// contador de descarte al ganador.
-const congrats = (parentDiv, character) => {
+
+// CONTADOR DE INTENTOS Y MENSAJE A GANADOR / PERDEDOR
+const congrats = (parentDiv, character, attempt) => {
+
+    const trySpan = document.createElement("span");
+    trySpan.id = "intentos"; 
+    parentDiv.appendChild(trySpan);
+  
+    
     let counter = 0;
-    for (const character of characters) {
-        
+
+    for (const character of characters) { 
         if (character.visible === true) {
-            counter += 1;   
-        }
+            counter += 1;  
+        }      
     }
     
-    if (counter === 1) {
+    attempt.intentos -= 1;
+    trySpan.textContent = `TE QUEDAN ${attempt.intentos} INTENTOS`;
+
+    if (counter === 1 && attempt.intentos >= 0) {
         const divWinner = document.getElementById("guessWhoDiv");
         divWinner.innerHTML = "";
         divWinner.classList.add("divWinner");
@@ -753,6 +773,21 @@ const congrats = (parentDiv, character) => {
         parentDiv.appendChild(divWinner);
         divWinner.appendChild(divWinnerP);
         divWinner.appendChild(imgWinner);
+    
+
+    } else if (counter > 1 && attempt.intentos <= 0)
+    
+    {
+        const divWinner = document.getElementById("guessWhoDiv");
+        divWinner.innerHTML = "";
+        divWinner.classList.add("divWinner");
+        const divWinnerP = document.createElement("p");
+        divWinnerP.className = "divWinnerParagraph";
+        divWinnerP.textContent = `HAS PERDIDO! INTÉNTALO OTRA VEZ!`;
+
+        parentDiv.appendChild(divWinner);
+        divWinner.appendChild(divWinnerP);
+        
     }
     
 }

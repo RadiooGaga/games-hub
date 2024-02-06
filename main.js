@@ -2,6 +2,7 @@ import './style.css';
 import './public/components/StarsBackground/starsBackground.css';
 import { cleanSheetAndOpenGame, printGamesCards } from './public/components/tools/tools.js';
 import {guessWhoGame} from './public/components/game2/game2.js';
+import { ahorcadoGame } from './public/components/game1/game1.js';
 
 
 
@@ -10,7 +11,7 @@ const games = [
         id: "game1",
         img: "./assets/pics/ahorcadoGame.png",
         style: "logo1",
-        funcion: guessWhoGame
+        funcion: ahorcadoGame
 
     },
     {

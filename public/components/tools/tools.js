@@ -73,4 +73,3 @@ const resetGame = (parentDiv, game, games) => {
    
 }
 
-

@@ -98,6 +98,19 @@
     cursor: pointer;
 }
 
+#intentos {
+    position: absolute;
+    top: 1em;
+    font-family: var(--rtc--font-family-2);
+    color: black;
+    background-color: rgb(242, 223, 226);
+    letter-spacing: 2px;
+    font-size: 18px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    border: none;
+}
+
 
 
 
@@ -476,7 +489,7 @@
     }
 
     .people > div {
-        width: 90px;
+        width: 80px;
     }
 
     .people > div > img {
