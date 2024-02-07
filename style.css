@@ -4,13 +4,21 @@
   box-sizing: border-box;
 }
 
-@font-face {font-family: "heavy_data"; src:url("./public/assets/fonts/heavy-data/heavy_data.ttf") format("truetype"); font-weight:lighter;font-style: normal;
+@font-face {font-family: "heavy_data"; src:url("./public/assets/fonts/heavy-data/heavy_data.ttf") format("truetype"); font-weight:lighter; font-style: normal;
 }
+
+@font-face {font-family: 'SF Pixelate', sans-serif; src:url("./public/assets/fonts/pixelate/SF-Pixelate.ttf") format("truetype"); font-weight:lighter; font-style: normal;
+}
+
+
+
+                
 
 :root {
 
   --rtc--font-family-1: Arial, Helvetica, sans-serif;
   --rtc--font-family-2: "heavy_data";
+  --rtc--font-family-3: 'SF Pixelate', sans-serif;
 
   --rtc--color-1: hsl(203, 75%, 44%);
   --rtc--color-2: hsl(6, 74%, 62%);

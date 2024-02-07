@@ -1,8 +1,6 @@
 import "./game1.css";
 
 
-
-
 // PETICIÓN A PALABRA ALEATORIA EN ESPAÑOL
 
 const callApi = async () => {
@@ -13,15 +11,22 @@ const callApi = async () => {
     try {
         const response = await fetch(randomWord, options);
         const word = await response.text();
+        console.log(word)
         return word;
-        
+          
     } catch (error) {
         throw error;  
     }
 }
 
 
+
 let selectedWord;
+const incompleteWord = {
+    valor: ""
+};
+
+
 
 
 // Creando El Ahorcado
@@ -29,15 +34,7 @@ let selectedWord;
 export const ahorcadoGame = (parentDiv) => {
     
     selectedWord = callApi();
-
-    selectedWord.then(word => {
-        console.log(word); 
-    }).catch(error => {
-        console.error('Error en la llamada a la API:', error);
-    });
-    
-  
-    
+   
     const ahorcadoDiv = document.createElement("div");
     ahorcadoDiv.id = "ahorcadoDiv";
 
@@ -70,14 +67,22 @@ export const ahorcadoGame = (parentDiv) => {
     wordContainer.id = "wordContainer";
     const ahorcadoTeclado = document.createElement("div");
     ahorcadoTeclado.id = "ahorcadoTeclado";
-    
 
+
+    selectedWord.then(word => {
+        selectedWord = word.toUpperCase().slice(2, word.length -2);
+        console.log(selectedWord) 
+        
+    }).catch(error => {
+        console.error('Error en la llamada a la API:', error);
+    });
+
+    
     parentDiv.appendChild(ahorcadoDiv);
     ahorcadoDiv.appendChild(ahorcadoTimer);
     ahorcadoTimer.appendChild(canvas);
     //canvas.appendChild(treeParts);
     ahorcadoDiv.appendChild(wordContainer);
-    //wordContainer.appendChild(selectedWord);
     ahorcadoDiv.appendChild(ahorcadoTeclado);
 
     // CREANDO EL MUÑECO
@@ -85,10 +90,8 @@ export const ahorcadoGame = (parentDiv) => {
 
 
     // CREANDO EL WORD CONTAINER 
-
-
-
-
+  
+    
 
     // CREANDO EL TECLADO
     const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
@@ -96,29 +99,93 @@ export const ahorcadoGame = (parentDiv) => {
 
     const tecladoContainer = document.getElementById("ahorcadoTeclado");
 
-    alphabet.forEach(letter => {
+
+    alphabet.forEach(letra => {
+        
         const letterButton = document.createElement('button');
-        letterButton.textContent = letter;
-        letterButton.className = "letter";
+        letterButton.textContent = letra;
+        letterButton.className = "letterButton";
         tecladoContainer.appendChild(letterButton);
-    });
     
+        const clickOnLetter = (e) => { //Desde aquí ocurre todo: ("click")
+            
+            letterButton.style.filter = "opacity(50%)"; 
+            letterButton.onclick = null; 
+            guessLetter(selectedWord, letra, incompleteWord)
+            printWord(wordContainer, incompleteWord)
+            
+        }
+        letterButton.onclick = clickOnLetter;
+    });
+
+    createWord(wordContainer, incompleteWord)
+   
 }
 
 
 
-let usedLetters;
-let mistakes;
-let hits;
+const createWord = (parentDiv) => {
+    parentDiv.innerHTML = "";
+    
+      selectedWord.then(word => {
+        for (const letter of selectedWord) {
+            const uniqueLetter = document.createElement("span");
+            uniqueLetter.id = "uniqueLetter";
+            uniqueLetter.innerHTML = "_";
+            incompleteWord.valor += "_";
+    
+            parentDiv.appendChild(uniqueLetter);
+        }
+    })
+}
 
 
+const printWord = (parentDiv, incompleteWord) => {
+    parentDiv.innerHTML = "";
+      
+        for (const letter of incompleteWord.valor) {
+            const uniqueLetter = document.createElement("span");
+            uniqueLetter.id = "uniqueLetter";
+            uniqueLetter.innerHTML = letter;
+            
+    
+            parentDiv.appendChild(uniqueLetter);
+        }
+    
+}
 
 
+ // comprobar en la palabra si coincide con el indexOf del abecedario pulsada
 
 
+ const guessLetter = (selectedWord, pressedLetter, incompleteWord) => {
+    let indice = 0;
+
+    const word = selectedWord.replaceAll(/[ÁÉÍÓÚ]/g, letra => ({
+        'Á': 'A',
+        'É': 'E',
+        'Í': 'I',
+        'Ó': 'O',
+        'Ú': 'U'
+    })[letra]);
+    console.log(word)
 
 
+    while (word.indexOf(pressedLetter, indice) !== -1) {
+    let str = incompleteWord.valor;
+    str = str.split('');
 
+            
+        indice = word.indexOf(pressedLetter, indice);
+        str.splice(indice, 1, pressedLetter);
+        str = str.join('');
+        incompleteWord.valor = str;
+        console.log(incompleteWord)
+        console.log(indice);
+        indice +=1;
+    }
+
+}
 
 
 
@@ -151,15 +218,7 @@ let usedLetters;
 let mistakes;
 let hits;
 
-const restartGame = (parentDiv) => {
 
-    usedLetters.innerHTML = [];
-    mistakes = 0;
-    hits = 0;
-    startButton.style.display = 'none';
-    drawAhorcado();
-}
-*/
 
 
 

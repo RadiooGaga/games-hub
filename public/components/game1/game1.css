@@ -21,16 +21,33 @@
     background-color: "none";
 }
 
-#newWord {
-    text-decoration: underline;
-    font-family: var(--rtc--font-family-2);
-}
 
 #wordContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     padding: 20px;
     grid-column: 2/3;
     background-color: rgb(246, 124, 144);
 }  
+
+#uniqueLetter {
+    /*text-decoration: underline;*/
+    font-family: var(--rtc--font-family-3);
+    font-size: 50px;
+    
+}
+
+/*
+.visible {
+   visibility: visible;
+}
+
+.hidden {
+   visibility: hidden; 
+}
+*/
+
 
 #ahorcadoTeclado {
     display: flex;
@@ -44,7 +61,7 @@
     background-color: aquamarine;
 }
 
-.letter {
+.letterButton {
     width: 60px;
     height: 60px;
     padding: 20px;
@@ -52,7 +69,7 @@
     border-radius: 10px;
 }
 
-.letter:hover {
+.letterButton:hover {
     cursor: pointer;
     color: white;
     background-color: grey;
