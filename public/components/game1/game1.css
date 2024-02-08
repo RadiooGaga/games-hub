@@ -330,7 +330,7 @@
 
     #ahorcadoDiv {
         top: 5em;
-        grid-template-rows: 320px 220px;
+        grid-template-rows: 320px 240px;
     }
     
     #ahorcadoTimer {
