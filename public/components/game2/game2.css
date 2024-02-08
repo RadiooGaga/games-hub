@@ -14,6 +14,7 @@
     padding: 10px 10px 30px;
     background-color: rgb(242, 223, 226);
     
+    
 }
 
 .people {
@@ -24,6 +25,7 @@
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px 20px 10px 20px;
+    background-color: rgb(242, 223, 226);
 }
 
 #atributtes {
@@ -36,7 +38,7 @@
     flex-wrap: wrap;
     gap: 15px;
     padding: 10px 15px 20px;
-    background-color: rgba(246, 147, 162, 0.434);
+    background-color: var(--rtc--color-3);
 }
 
 #atributtes > button {
@@ -130,7 +132,6 @@
         align-content: center;
         padding: 5px 5px 30px;
         gap: 10px;
-        background-color: rgb(242, 223, 226);
         
     }
 
