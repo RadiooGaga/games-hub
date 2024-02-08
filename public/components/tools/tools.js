@@ -1,6 +1,4 @@
 
-import './tools.css';
-
 
 // PINTAR LAS TARJETAS DEL MENU
 

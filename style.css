@@ -127,12 +127,6 @@ h4 {
   box-shadow: 0 0 5px hsl(178, 63%, 38%), 0 0 15px hsl(178, 63%, 38%), 0 0 25px hsl(178, 63%, 38%), 0 0 100px hsl(178, 63%, 38%);
 }
 
-/*
-#game3 {
-  position: relative;
-  top: 29px;
-}
-*/
 
 .logo1, .logo2, .logo3 {
   width: 90%;
@@ -186,7 +180,7 @@ h4 {
     justify-content:center;
     align-items: center;
     top:3em;
-    height: 87svh;
+    height: 93svh;
     gap: 43px;
     padding: 10px;
   }
