@@ -333,6 +333,7 @@
 @media screen and (min-width:1280px) { 
 
     #ahorcadoDiv {
+        top: 4em;
         grid-template-rows: 200px 180px;
     }
     
@@ -346,7 +347,7 @@
         display: flex;
         justify-content: center;
         align-self: center;
-        width: 100px;
+        width: 120px;
         height: 160px;
     }
 
