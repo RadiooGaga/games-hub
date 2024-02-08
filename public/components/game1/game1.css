@@ -90,7 +90,7 @@
         padding: 10px;
         display: grid;
         grid-template-columns: 95%; 
-        grid-template-rows: 160px 90px 300px;
+        grid-template-rows: 150px 80px 290px;
     }
 
     #ahorcadoTimer {
@@ -272,7 +272,7 @@
         padding: 20px;
         display: grid;
         grid-template-columns: 35% 65%;
-        grid-template-rows: 340px;
+        grid-template-rows: 200px 180px;
     }
     
     #ahorcadoTimer {
@@ -333,7 +333,7 @@
 @media screen and (min-width:1280px) { 
 
     #ahorcadoDiv {
-        grid-template-rows: 360px 280px;
+        grid-template-rows: 200px 180px;
     }
     
     #ahorcadoTimer {
@@ -346,22 +346,22 @@
         display: flex;
         justify-content: center;
         align-self: center;
-        width: 160px;
-        height: 220px;
+        width: 100px;
+        height: 160px;
     }
 
     
     #ahorcadoTeclado {
-        gap: 24px;
-        padding: 70px;
+        gap: 12px;
+        padding: 20px;
     }
     
     .letterButton {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 50px;
         padding: 20px;
         font-size: 25px;
     }

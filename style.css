@@ -310,7 +310,7 @@ h4 {
     #headerDiv {
       display: flex;
       justify-content: center;
-      height: 9svh;
+      height: 7svh;
     }
   
     #gamesDiv {
@@ -319,7 +319,7 @@ h4 {
       flex-wrap: wrap;
       justify-content:space-around;
       align-items: center;
-      top: 4em;
+      top: 5em;
       height: 84svh;
       gap: 20px;
       padding: 20px 40px;
@@ -328,7 +328,7 @@ h4 {
 
     #game1, #game2, #game3 {
       width: 40%;
-      height: 300px;
+      height: 270px;
     }
   
     .logo1, .logo2, .logo3 {
