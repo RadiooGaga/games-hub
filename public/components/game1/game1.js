@@ -33,6 +33,7 @@ const incompleteWord = {
 
 export const ahorcadoGame = (parentDiv) => {
     
+    incompleteWord.valor = "";
     selectedWord = callApi();
    
     const ahorcadoDiv = document.createElement("div");
@@ -146,17 +147,14 @@ const printWord = (parentDiv, incompleteWord) => {
         for (const letter of incompleteWord.valor) {
             const uniqueLetter = document.createElement("span");
             uniqueLetter.id = "uniqueLetter";
-            uniqueLetter.innerHTML = letter;
-            
+            uniqueLetter.innerHTML = letter; 
     
             parentDiv.appendChild(uniqueLetter);
         }
-    
 }
 
 
  // comprobar en la palabra si coincide con el indexOf del abecedario pulsada
-
 
  const guessLetter = (selectedWord, pressedLetter, incompleteWord) => {
     let indice = 0;
@@ -174,8 +172,7 @@ const printWord = (parentDiv, incompleteWord) => {
     while (word.indexOf(pressedLetter, indice) !== -1) {
     let str = incompleteWord.valor;
     str = str.split('');
-
-            
+       
         indice = word.indexOf(pressedLetter, indice);
         str.splice(indice, 1, pressedLetter);
         str = str.join('');
@@ -184,7 +181,6 @@ const printWord = (parentDiv, incompleteWord) => {
         console.log(indice);
         indice +=1;
     }
-
 }
 
 
