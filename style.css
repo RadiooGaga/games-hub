@@ -183,14 +183,14 @@ h4 {
     justify-content:center;
     align-items: center;
     top:3em;
-    height: 90svh;
+    height: 87svh;
     gap: 43px;
     padding: 10px;
   }
 
   #game1, #game2, #game3 {
-    width: 83%;
-    height: 170px;
+    width: 70%;
+    height: 115px;
     padding: 15px;
   }
 
