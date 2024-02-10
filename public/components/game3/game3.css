@@ -90,12 +90,12 @@
     }
     
     .divCard {
-        width: 30%;
+        width: 100px;
         height: 150px;
     }
 
     #pic {
-        width: 30%;
+        width: 100px;
         height: 150px;
         object-fit: cover;
     }
