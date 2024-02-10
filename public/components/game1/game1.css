@@ -39,19 +39,7 @@
     font-family: var(--rtc--font-family-3);
     font-size: 50px;
     color: var(--rtc--color-almostBlack);
-    
 }
-
-/*
-.visible {
-   visibility: visible;
-}
-
-.hidden {
-   visibility: hidden; 
-}
-*/
-
 
 #ahorcadoTeclado {
     display: flex;
@@ -79,6 +67,10 @@
     background-color: grey;
 }
 
+.giphy-embed {
+    width: auto;
+    height: auto;
+}
  
 
 
@@ -203,7 +195,7 @@
         padding: 20px;
         display: grid;
         grid-template-columns: 35% 65%;
-        grid-template-rows: 220px auto;
+        grid-template-rows: 240px auto;
     }
     
     #ahorcadoTimer {
@@ -269,7 +261,7 @@
         padding: 20px;
         display: grid;
         grid-template-columns: 35% 65%;
-        grid-template-rows: 230px auto;
+        grid-template-rows: 280px auto;
     }
     
     #ahorcadoTimer {
@@ -330,7 +322,7 @@
 
     #ahorcadoDiv {
         top: 5em;
-        grid-template-rows: 320px 240px;
+        grid-template-rows: 320px auto;
     }
     
     #ahorcadoTimer {

@@ -763,6 +763,8 @@ const congrats = (parentDiv, character, attempt) => {
     if (counter === 1 && attempt.intentos >= 0) {
         const divWinner = document.getElementById("guessWhoDiv");
         divWinner.innerHTML = "";
+        trySpan.innerHTML = "";
+        trySpan.textContent = `TE QUEDAN ${attempt.intentos} INTENTOS`;
         divWinner.classList.add("divWinner");
         const divWinnerP = document.createElement("p");
         divWinnerP.className = "divWinnerParagraph";

@@ -166,6 +166,20 @@ const printWord = (parentDiv, incompleteWord) => {
         str = str.join('');
         incompleteWord.valor = str;
         indice +=1;
+        console.log(indice)
+        console.log(str)
+        if (str === word) {
+            const win = document.getElementById("ahorcadoTeclado");
+                win.innerHTML = "";
+                const iFrame = document.createElement("img");
+                iFrame.src = "./public/assets/gif/giphyHellYeah.gif";
+                iFrame.className ="giphy-embed"; 
+                iFrame.style.width = "480";
+                iFrame.style.height = "200px";
+                win.appendChild(iFrame)
+            console.log("hell yeaaaah!")
+            
+        }
     }
    
     if (indice > 0) {
@@ -218,13 +232,13 @@ const printWord = (parentDiv, incompleteWord) => {
             context.fillRect(bodyPart.x,bodyPart.y,bodyPart.width,bodyPart.height);
         }
         if (attempt.fallos === 11) {
-            const lost = document.getElementById("ahorcadoTeclado");
-            lost.innerHTML = "";
+            const win = document.getElementById("ahorcadoTeclado");
+            win.innerHTML = "";
             const skull = document.createElement("img");
             skull.src = "./assets/icons/calavera-y-huesos.png";
             skull.style.width = "200px";
             skull.style.height = "200px";
-            lost.appendChild(skull)
+            win.appendChild(skull)
             console.log("perdiste")
         }
     }
@@ -255,3 +269,4 @@ try {
 
 
 /* SWITCH TO ENGLISH */
+
