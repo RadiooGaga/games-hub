@@ -90,13 +90,13 @@
     }
     
     .divCard {
-        width: 100px;
-        height: 150px;
+        width: 90px;
+        height: 140px;
     }
 
     #pic {
-        width: 100px;
-        height: 150px;
+        width: 90px;
+        height: 140px;
         object-fit: cover;
     }
 }
