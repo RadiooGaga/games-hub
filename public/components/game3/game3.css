@@ -2,7 +2,7 @@
     width: 95%;
     height: auto;
     position: absolute;
-    top: 7em;
+    top: 6em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -19,14 +19,23 @@
     width: 100%;
     height: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-.pointsSpan {
+#pointsSpan {
+    font-size: 40px;
+    padding: 10px;
     font-family: var(--rtc--font-family-2);
     color:var(--rtc--color-softPink);
+}
+
+.selectDiv {
+    width: 20%;
+    background-color: var(--rtc--color-softPink);
+    border-radius: 5px;
+    height: auto;
 }
 
 #divCards {
@@ -41,7 +50,7 @@
 }
 
 
-.card {
+.divCard {
     width: 200px;
     height: 250px;
     border-radius: 5px;
@@ -52,17 +61,118 @@
 
 }
 
-#imgCard {
-    width: 100%;
+#pic {
+    width: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
-.card:hover {
-    transform: scale(1.1);
+
+
+@media screen and (max-width: 480px) {
+    
+    #memoryGameDiv {
+        top: 4em;
+        gap: 0px;
+    }
+
+    #pointsSpan {
+        padding: 5px;
+        font-family: var(--rtc--font-family-2);
+        font-size: 20px;
+    }
+
+    #divCards {
+        gap: 10px;
+        padding: 20px 5px 20px 5px;
+        
+    }
+    
+    
+    .divCard {
+        width: 30%;
+        height: 150px;
+    }
 }
 
-span {
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
-}
+
+    
+
+
+
+@media screen and (min-width: 481px) and (max-width:768px){
+
+    #memoryGameDiv {
+        top: 4em;
+        gap: 0px;
+    }
+
+    #pointsSpan {
+        padding: 5px;
+        font-family: var(--rtc--font-family-2);
+        font-size: 25px;
+    }
+
+
+    #divCards {
+        gap: 10px;
+        padding: 20px 5px 20px 5px;
+        
+    }
+    
+    
+    .divCard {
+        width: 120px;
+        height: 170px;
+    }
+   
+  }
+  
+  
+  
+  @media screen and (min-width: 769px) and (max-width:1023px){
+
+    #memoryGameDiv {
+        top: 5em;
+        gap: 0px;
+    }
+
+    #pointsSpan {
+        padding: 5px;
+        font-family: var(--rtc--font-family-2);
+        font-size: 25px;
+    }
+  
+    #divCards {
+        gap: 10px;
+        padding: 20px 5px 20px 5px;
+        
+    }
+    
+    
+    .divCard {
+        width: 150px;
+        height: 200px;
+    }
+  
+  }
+  
+  @media screen and (min-width:1024px) and (max-width:1279px) {
+  
+    .divCard {
+        width: 150px;
+        height: 200px;
+    }
+
+  }
+  
+  
+  
+  @media screen and (min-width:1280px)  {
+    .divCard {
+        width: 200px;
+        height: 250px;
+    }
+
+  
+  }

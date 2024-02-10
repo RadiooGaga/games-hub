@@ -1,133 +1,120 @@
 import "./game3.css";
 
-// 10 cartas. 5 tipos de cartas distintas, porque serán 5 parejas.
 
-const collection = [
-  {
-    id: "",
-    picture: "red",
-  },
-  {
-    id: "",
-    picture: "orange",
-  },
-  {
-    id: "",
-    picture: "blue",
-  },
-  {
-    id: "",
-    picture: "pink",
-  },
-  {
-    id: "",
-    picture: "grey",
-  },
-  {
-    id: "",
-    picture: "red",
-  },
-  {
-    id: "",
-    picture: "orange",
-  },
-  {
-    id: "",
-    picture: "blue",
-  },
-  {
-    id: "",
-    picture: "pink",
-  },
-  {
-    id: "",
-    picture: "grey",
-  },
-];
+let chosenCategory = "cats";
+const options = ["cats", "dogs", "animals", "toy"];
 
+
+
+const callApiCollection = async (categoria)=> {
+
+    let id = "74vRF6e1l9a6WTlt7b7Nh9VT5zqNeqK-APQEnqePUHo";
+    let url = `https://api.unsplash.com/search/photos?query=${categoria}&per_page=8&client_id=${id}`;
+    console.log(categoria)
+    console.log(url)
+    const options = {
+        method: 'GET' };
+        try {
+    
+        const response = await fetch(url, options);
+        const res = await response.json()
+        const collect = res.results;
+        let collection = collect.map(data => {
+            return {
+              id: data.id,
+              pictureUrl: data.urls.small
+            };
+          });
+          console.log(collection); 
+          
+          let newCollection =[...collection,...collection];   
+          return newCollection.sort((a, b) => Math.random() - Math.random());
+        
+        } catch (error) {
+            console.log(error)
+            console.log("error en la busqueda")
+        }
+}
+
+
+let collection = [];
 let counter = 0;
 let card1;
 let card2;
 let puntuacion = 0;
 
-collection.sort((a, b) => Math.random() - Math.random());
-/* sort para coger un num aleatorio y num aleatorio y los resta, y esto significa que va a 
-coger una posición y otra y las va a ordenar según si uno es mayor que otro, y que eso 
-dependerá de una aleatoriedad que le estamos dando con el.random */
 
 
 // CREANDO MEMORY GAME
 export const memoryGame = (parentDiv) => {
 
-    callApiCollection();
+    puntuacion = 0;
+    collection = callApiCollection(chosenCategory)
+    
 
     const memoryGameDiv = document.createElement("div");
     memoryGameDiv.id = "memoryGameDiv";
     const divPoints = document.createElement("div");
     divPoints.id = "divPoints";
+    const selectDiv = document.createElement("select");
+    selectDiv.className = "selectDiv";
+
+    for (const option of options) {
+        const selectOption = document.createElement("option");
+        selectOption.textContent = option;
+        selectOption.value = option;
+        selectDiv.appendChild(selectOption);
+  
+      }
+    selectDiv.value = chosenCategory;
+
+
+    selectDiv.addEventListener("change", () => {
+        chosenCategory = selectDiv.value;
+        memoryGameDiv.innerHTML = "";
+        memoryGame(parentDiv);
+        console.log("evento")
+    }) 
+
+
     const pointsSpan = document.createElement("span");
-    pointsSpan.className = "pointsSpan";
+    pointsSpan.id = "pointsSpan";
     pointsSpan.textContent = `Puntuación:` + " " + puntuacion;
-    //document.body.insertBefore(points, memoryGameDiv);
     const divCards = document.createElement("div");
     divCards.id = "divCards";
-    /*const imgCard = document.createElement("img");
-    imgCard.id = "imgCard";*/
-
+    
 
     parentDiv.appendChild(memoryGameDiv);
     memoryGameDiv.appendChild(divPoints);
     divPoints.appendChild(pointsSpan);
+    divPoints.appendChild(selectDiv);
     memoryGameDiv.appendChild(divCards);
-   
-
-
-/* recorrer el array de cartas para meter las cartas y pintarlas en el juego */
-
-   collection.forEach((data) => {
-
-    const divCard = document.createElement("div"); 
-    divCard.className = "card";
-    divCards.appendChild(divCard);
-
-    divCard.addEventListener("click", () =>
-        select(divCard, data)
-    );
-    
-    
-    //divCard.appendChild(imgCard);
-    });
-
-}
 
 
 
+// PINTAR CARTAS
 
-const callApiCollection = async ()=> {
+   collection.then(pictures => {
+        pictures.forEach((data) => {
 
-    let id = "74vRF6e1l9a6WTlt7b7Nh9VT5zqNeqK-APQEnqePUHo";
-    let url = `https://api.unsplash.com/search/photos?query=cats&per_page=12&client_id=${id}`
-        const response = await fetch(url);
-        const collection = await response.json()
-        const cardCollection = collection.results;
-        console.log(cardCollection);
+            const divCard = document.createElement("div"); 
+            divCard.className = "divCard";
+            divCards.appendChild(divCard);
+            const picture = document.createElement("img");
         
-
-        for (let i = 0; i < collection.results.length; i++) {
-            const picture = collection[i];
-            console.log(picture)
-            
-        }
-    }
-
-
-
-
-
-
-
-
-
+            picture.src = "";
+            divCard.appendChild(picture);
+        
+    
+            divCard.addEventListener("click", () => {
+                
+                    select(divCard, data, picture)
+            });
+    
+        });
+    
+    });
+}
 
 
 const resetValues = () => {
@@ -137,57 +124,60 @@ const resetValues = () => {
   console.log(puntuacion);
 };
 
-
 const resetCard = (cartaGenerica) => {
-  cartaGenerica.nodoHTML.style.backgroundColor = "#e0776c";
-  cartaGenerica.nodoHTML.style.backgroundImage = "";
+    cartaGenerica.nodoHTML.id = "";
+    cartaGenerica.nodoHTML.src = "";
     "url(https://www.transparenttextures.com/patterns/argyle.png)";
 };
 
 
-
 const checkCard = () => {
-  if (card1.cardData.picture === card2.cardData.picture) {
+  if (card1.cardData === card2.cardData) {
+    console.log(card1)
     puntuacion++;
     resetValues();
   } else {
     puntuacion--;
     setTimeout(() => {
-      //aquí, dar la vuelta si no se acierta, y cambiar el bckgr color y bckgr image.
+      //DAR VUELTA SI HAY ERROR
       resetCard(card1);
       resetCard(card2);
       resetValues();
-    }, 500); //si no acierto, tarda medio segundo en que se den la vuelta de nuevo.
+    }, 700); //TARDA CASI UN SEGUNDO EN VOLTEAR
   }
 
-  pointsSpan.textContent = `Puntuación:` + " " + puntuacion;
+  const points = document.getElementById("pointsSpan");
+  points.textContent = `Puntuación:` + " " + puntuacion;
+  
 };
 
-const select = (divCard, data) => {
+const select = (divCard, data, picture) => {
+    console.log(counter)
   if (counter < 2) {
     counter++;
-    divCard.style.backgroundColor = data.picture; // aqui meter la foto
-    divCard.style.backgroundImage = "none";
+    divCard.style.backgroundColor = "#5c9bc1d4"; 
+    picture.id = "pic";
+    picture.src = data.pictureUrl;// aqui meter la foto
   }
 
   if (counter === 1) {
     card1 = {
-      nodoHTML: divCard,
-      cardData: data,
+      nodoHTML: picture,
+      cardData: data.pictureUrl,
     };
     console.log(card1);
   }
 
   if (counter === 2) {
-    //2. necesitamos saber cuándo se ha seleccionado OTRA carta.
+    // cuándo se ha seleccionado OTRA carta.
     card2 = {
-      nodoHTML: divCard,
-      cardData: data,
+      nodoHTML: picture,
+      cardData: data.pictureUrl,
     };
     console.log(card2);
     checkCard();
   }
-  // necesitamos comparar esas dos cartas seleccionadas.
+  // comparar esas dos cartas seleccionadas.
 };
 
 

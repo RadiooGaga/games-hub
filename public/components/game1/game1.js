@@ -46,6 +46,7 @@ export const ahorcadoGame = (parentDiv) => {
     attempt.fallos = 0; //reinicio de contador libre.
     incompleteWord.valor = "";
     selectedWord = callApi();
+ 
    
     const ahorcadoDiv = document.createElement("div");
     ahorcadoDiv.id = "ahorcadoDiv";
