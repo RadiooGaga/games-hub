@@ -102,8 +102,8 @@
     }
 
     #pic {
-        width: 90px;
-        height: 140px;
+        width: 65px;
+        height: 105px;
         object-fit: cover;
     }
 }

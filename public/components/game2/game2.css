@@ -137,13 +137,13 @@
 
     .people {
         display: flex;
-        justify-content:center;
+        justify-content:space-between;
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
         height: auto;
         padding: 5px;
-        gap: 5px;
+        gap: 3px;
     }
 
     .people > div {
@@ -207,9 +207,10 @@
     }
 
     #intentos {
-        top: 5em;
-        font-size: 10px;
-        padding: 8px 18px;
+        top: 1.5em;
+        left: 15em;
+        font-size: 8px;
+        padding: 8px 10px;
     }
 
 }

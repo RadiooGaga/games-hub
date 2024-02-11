@@ -173,7 +173,7 @@ const printWord = (parentDiv, incompleteWord) => {
             const win = document.getElementById("ahorcadoTeclado");
                 win.innerHTML = "";
                 const iFrame = document.createElement("img");
-                iFrame.src = "./public/assets/gif/giphyHellYeah.gif";
+                iFrame.src = "./assets/gif/giphyHellYeah.gif";
                 iFrame.className ="giphy-embed"; 
                 iFrame.style.width = "480";
                 iFrame.style.height = "200px";
