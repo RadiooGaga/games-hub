@@ -22,6 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
 }
 
 #pointsSpan {
@@ -73,25 +74,31 @@
 @media screen and (max-width: 480px) {
     
     #memoryGameDiv {
-        top: 4em;
+        top: 3em;
         gap: 0px;
+        padding: 10px 10px 20px;
     }
 
     #pointsSpan {
-        padding: 5px;
         font-family: var(--rtc--font-family-2);
         font-size: 20px;
     }
 
+    #divPoints {
+        padding: 5px 5px 15px;
+        height: 25px;
+    }
+
     #divCards {
+        justify-content: space-evenly;
         gap: 10px;
-        padding: 20px 5px 20px 5px;
+        padding: 10px 5px 20px 5px;
         
     }
     
     .divCard {
-        width: 90px;
-        height: 140px;
+        width: 65px;
+        height: 105px;
     }
 
     #pic {
