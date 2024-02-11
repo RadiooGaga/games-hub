@@ -143,7 +143,7 @@ h4 {
 
 #footerDiv {
   width: 100%;
-  height: 7svh;
+  height: 5svh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,7 +218,7 @@ h4 {
   }
 
   #headerDiv {
-    height: 8svh;
+    height: 7svh;
     padding: var(--rtc--padding-s);
   }
 
@@ -229,14 +229,14 @@ h4 {
     align-content: baseline;
     align-items: center;
     top: 5em;
-    height: 86svh;
+    height: 89svh;
     gap: 40px;
-    padding: 20px;
+    padding: 30px;
   }
 
   #game1, #game2, #game3 {
-    width: 70%;
-    height: 200px;
+    width: 75%;
+    height: 250px;
   }
   .logo1, .logo2, .logo3 {
     width: 100%;
@@ -244,7 +244,7 @@ h4 {
   }
 
   #footerDiv {
-    height: 5svh;
+    height: 4svh;
     position: fixed;
     z-index: 0;
     padding: var(--rtc--padding-s);
@@ -273,8 +273,8 @@ h4 {
     flex-wrap: wrap;
     justify-content:space-around;
     align-items: center;
-    top: 5.5em;
-    height: 84svh;
+    top: 4em;
+    height: 87svh;
     gap: 20px;
     padding: 30px ;
   }
@@ -285,7 +285,7 @@ h4 {
   }
 
   #footerDiv {
-    height: 6svh;
+    height: 4.5svh;
     position: fixed;
     z-index: 0;
     padding: var(--rtc--padding-s);
@@ -316,8 +316,8 @@ h4 {
       flex-wrap: wrap;
       justify-content:space-around;
       align-items: center;
-      top: 5em;
-      height: 84svh;
+      top: 4.5em;
+      height: 86svh;
       gap: 20px;
       padding: 20px 40px;
       
@@ -343,7 +343,7 @@ h4 {
 
 
 
-@media screen and (min-width:1280px) and (max-width:1439px) {
+@media screen and (min-width:1280px) and (max-width:1440px) {
 
   h1 {
   font-size: 40px;
@@ -362,7 +362,7 @@ h4 {
     justify-content: center;
     align-items: center;
     top: 5em;
-    height: 80svh;
+    height: 85svh;
     gap: 60px;
     padding: 20px 40px;
     
@@ -379,7 +379,7 @@ h4 {
   }
 
   #footerDiv {
-    height: 8svh;
+    height: 6svh;
     position: fixed;
     z-index: 0;
     padding: var(--rtc--padding-s);

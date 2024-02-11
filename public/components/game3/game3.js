@@ -95,23 +95,24 @@ export const memoryGame = (parentDiv) => {
 // PINTAR CARTAS
 
    collection.then(pictures => {
-        pictures.forEach((data) => {
+        for (let i = 0; i < pictures.length; i++) {
 
             const divCard = document.createElement("div"); 
             divCard.className = "divCard";
+            divCard.id = i;
             divCards.appendChild(divCard);
             const picture = document.createElement("img");
         
             picture.src = "";
             divCard.appendChild(picture);
-        
+
+            const cardClickHandler = (e) => {
+              select(divCard, pictures[i], picture)
+            }
     
-            divCard.addEventListener("click", () => {
-                
-                    select(divCard, data, picture)
-            });
+            divCard.onclick = cardClickHandler;
     
-        });
+        };
     
     });
 }
@@ -135,7 +136,10 @@ const checkCard = () => {
   if (card1.cardData === card2.cardData) {
     console.log(card1)
     puntuacion++;
+    card1.divCard.onclick = null;
+    card2.divCard.onclick = null;
     resetValues();
+
   } else {
     puntuacion--;
     setTimeout(() => {
@@ -152,30 +156,37 @@ const checkCard = () => {
 };
 
 const select = (divCard, data, picture) => {
-    console.log(counter)
+  
   if (counter < 2) {
+    if (counter === 1 && card1.divCard.id === divCard.id){
+//si la primera tarjeta que pulsas es igual a la segunda vez que pulsas la misma tarjeta.
+      return // no da por util la misma que clicas. No permite comparar la tarjeta consigo misma.
+    }
     counter++;
     divCard.style.backgroundColor = "#5c9bc1d4"; 
     picture.id = "pic";
     picture.src = data.pictureUrl;// aqui meter la foto
-  }
+  
 
-  if (counter === 1) {
-    card1 = {
-      nodoHTML: picture,
-      cardData: data.pictureUrl,
-    };
-    console.log(card1);
-  }
+    if (counter === 1) {
+      card1 = {
+        nodoHTML: picture,
+        divCard: divCard,
+        cardData: data.pictureUrl,
+      };
+      console.log(card1);
+    }
 
-  if (counter === 2) {
-    // cuándo se ha seleccionado OTRA carta.
-    card2 = {
-      nodoHTML: picture,
-      cardData: data.pictureUrl,
-    };
-    console.log(card2);
-    checkCard();
+    if (counter === 2) {
+      // cuándo se ha seleccionado OTRA carta.
+      card2 = {
+        nodoHTML: picture,
+        divCard: divCard,
+        cardData: data.pictureUrl,
+      };
+      console.log(card2);
+      checkCard();
+    }
   }
   // comparar esas dos cartas seleccionadas.
 };

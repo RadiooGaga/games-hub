@@ -52,8 +52,8 @@
 
 
 .divCard {
-    width: 200px;
-    height: 250px;
+    width: 160px;
+    height: 240px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.5s;
@@ -63,8 +63,8 @@
 }
 
 #pic {
-    width: 200px;
-    height: 250px;
+    width: 160px;
+    height: 240px;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -97,13 +97,13 @@
     }
     
     .divCard {
-        width: 65px;
-        height: 105px;
+        width: 70px;
+        height: 100px;
     }
 
     #pic {
-        width: 65px;
-        height: 105px;
+        width: 70px;
+        height: 100px;
         object-fit: cover;
     }
 }
@@ -128,6 +128,7 @@
 
 
     #divCards {
+        justify-content: space-evenly;
         gap: 10px;
         padding: 20px 5px 20px 5px;
         
@@ -135,8 +136,8 @@
     
     
     .divCard {
-        width: 120px;
-        height: 170px;
+        width: 100px;
+        height: 150px;
     }
 
     #pic {
@@ -163,18 +164,19 @@
     }
   
     #divCards {
+        justify-content: center;
         gap: 10px;
         padding: 20px 5px 20px 5px;
     }
     
     .divCard {
-        width: 150px;
-        height: 200px;
+        width: 130px;
+        height: 170px;
     }
 
     #pic {
-        width: 150px;
-        height: 200px;
+        width: 130px;
+        height: 170px;
         object-fit: cover;
     }
   
@@ -183,15 +185,20 @@
 
   
   @media screen and (min-width:1024px) and (max-width:1279px) {
+
+    #memoryGameDiv {
+        top: 4.5em;
+        gap: 0px;
+    }
   
     .divCard {
-        width: 150px;
-        height: 200px;
+        width: 130px;
+        height: 190px;
     }
 
     #pic {
-        width: 150px;
-        height: 200px;
+        width: 130px;
+        height: 190px;
         object-fit: cover;
     }
 
@@ -201,16 +208,21 @@
   
   
   
-  @media screen and (min-width:1280px)  {
+  @media screen and (min-width:1280px)and (max-width:1440px)  {
+
+    #memoryGameDiv {
+        top: 5em;
+        gap: 0px;
+    }
 
     .divCard {
-        width: 200px;
-        height: 250px;
+        width: 130px;
+        height:200px;
     }
 
     #pic {
-        width: 200px;
-        height: 250px;
+        width: 130px;
+        height: 200px;
         object-fit: cover;
     }
 

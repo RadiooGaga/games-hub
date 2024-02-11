@@ -220,7 +220,7 @@
 
     #guessWhoDiv {
         width: 95%;
-        top: 5.5em;
+        top: 3.5em;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -238,10 +238,10 @@
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 74%;
+        width: 100%;
         height: auto;
-        gap: 10px;
-        padding: 5px;
+        gap: 5px;
+        padding: 15px 5px;
     }
 
     .people > div {
@@ -253,7 +253,7 @@
     }
 
     #atributtes {
-        width: 23%;
+        width: 95%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -261,12 +261,13 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
-        padding: 15px 10px 20px 5px;
+        padding: 15px 10px;
     }
 
     #atributtes > button {
-        width: 55px;
-        height: 55px;
+        width: 47px;
+        height: 47px;
+        box-shadow: 7px 5px 5px 3px rgb(134, 79, 87);
     }
    
 
@@ -311,7 +312,7 @@
 
     #guessWhoDiv {
         width: 95%;
-        top: 5.5em;
+        top: 5em;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -329,14 +330,14 @@
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 70%;
+        width: 100%;
         height: auto;
         gap: 10px;
         padding: 10px 5px;
     }
 
     .people > div {
-        width: 100px;
+        width: 93px;
     }
 
     .people > div > img {
@@ -344,7 +345,7 @@
     }
 
     #atributtes {
-        width: 24%;
+        width: 95%;
         height: auto;
         display: flex;
         justify-content: space-evenly;
@@ -352,12 +353,13 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
-        padding: 15px 10px 20px 5px;
+        padding: 20px;
     }
 
     #atributtes > button {
-        width: 60px;
-        height: 60px;
+        width: 55px;
+        height: 55px;
+        box-shadow: 6px 4px 5px 3px rgb(134, 79, 87);
     }
    
 
