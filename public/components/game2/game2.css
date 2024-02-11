@@ -407,7 +407,7 @@
         width: 95%;
         height: auto;
         position: absolute;
-        top: 5em;
+        top: 4em;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -506,7 +506,7 @@
   
     #guessWhoDiv {
         width: 95%;
-        top: 5.5em;
+        top: 3.5em;
         padding: 5px 5px 10px;
     }
 

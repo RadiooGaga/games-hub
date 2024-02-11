@@ -320,10 +320,10 @@
     }
 }
   
-@media screen and (min-width:1280px) { 
+@media screen and (min-width:1280px) and (max-width:1439px)  { 
 
     #ahorcadoDiv {
-        top: 5em;
+        top: 3.5em;
         grid-template-rows: 320px auto;
     }
     

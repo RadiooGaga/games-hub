@@ -208,10 +208,10 @@
   
   
   
-  @media screen and (min-width:1280px)and (max-width:1440px)  {
+  @media screen and (min-width:1280px)and (max-width:1439px)  {
 
     #memoryGameDiv {
-        top: 5em;
+        top: 3.5em;
         gap: 0px;
     }
 
