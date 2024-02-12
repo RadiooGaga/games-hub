@@ -68,7 +68,7 @@ export const ahorcadoGame = (parentDiv) => {
 
     selectedWord.then(word => {
         selectedWord = word.toUpperCase().slice(2, word.length -2);
-        console.log(selectedWord) 
+
         
     }).catch(error => {
         console.error('Error en la llamada a la API:', error);
@@ -155,7 +155,7 @@ const printWord = (parentDiv, incompleteWord) => {
         'Ó': 'O',
         'Ú': 'U'
     })[letra]);
-    console.log(word)
+   
 
 
     while (word.indexOf(pressedLetter, indice) !== -1) {
@@ -167,8 +167,7 @@ const printWord = (parentDiv, incompleteWord) => {
         str = str.join('');
         incompleteWord.valor = str;
         indice +=1;
-        console.log(indice)
-        console.log(str)
+        
         if (str === word) {
             const win = document.getElementById("ahorcadoTeclado");
                 win.innerHTML = "";

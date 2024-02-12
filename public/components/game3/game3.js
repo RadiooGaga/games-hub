@@ -25,7 +25,7 @@ const callApiCollection = async (categoria)=> {
               pictureUrl: data.urls.small
             };
           });
-          console.log(collection); 
+          
           
           let newCollection =[...collection,...collection];   
           return newCollection.sort((a, b) => Math.random() - Math.random());
@@ -73,7 +73,7 @@ export const memoryGame = (parentDiv) => {
         chosenCategory = selectDiv.value;
         memoryGameDiv.innerHTML = "";
         memoryGame(parentDiv);
-        console.log("evento")
+        
     }) 
 
 
@@ -122,7 +122,7 @@ const resetValues = () => {
   counter = 0;
   card1 = undefined;
   card2 = undefined;
-  console.log(puntuacion);
+  
 };
 
 const resetCard = (cartaGenerica) => {
@@ -174,7 +174,7 @@ const select = (divCard, data, picture) => {
         divCard: divCard,
         cardData: data.pictureUrl,
       };
-      console.log(card1);
+      
     }
 
     if (counter === 2) {
@@ -184,7 +184,7 @@ const select = (divCard, data, picture) => {
         divCard: divCard,
         cardData: data.pictureUrl,
       };
-      console.log(card2);
+      
       checkCard();
     }
   }
