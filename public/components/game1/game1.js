@@ -9,7 +9,6 @@ const callApi = async () => {
     try {
         const response = await fetch(randomWord, options);
         const word = await response.text();
-        console.log(word)
         return word;
           
     } catch (error) {
