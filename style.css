@@ -10,9 +10,7 @@
 @font-face {font-family: 'SF Pixelate', sans-serif; src:url("./public/assets/fonts/pixelate/SF-Pixelate.ttf") format("truetype"); font-weight:lighter; font-style: normal;
 }
 
-
-
-                
+              
 
 :root {
 
@@ -52,7 +50,10 @@
 html {
   max-width: 100%;
   height: 100svh;
+  background: radial-gradient(ellipse at center, #1b2735, #090a0f);
 }
+
+
 
 /*  ------------  ATENDER AL OVERFLOW CUANDO AÑADA COSAS ABAJO ----- */
 body {
