@@ -1,9 +1,8 @@
 import './style.css';
-import './public/components/StarsBackground/starsBackground.css';
-import { cleanSheetAndOpenGame, printGamesCards } from './public/components/tools/tools.js';
-import { ahorcadoGame } from './public/components/game1/game1.js';
-import { guessWhoGame } from './public/components/game2/game2.js';
-import { memoryGame} from './public/components/game3/game3.js';
+import { cleanSheetAndOpenGame, printGamesCards } from './src/tools/tools.js';
+import { ahorcadoGame } from './src/components/game1/game1.js';
+import { guessWhoGame } from './src/components/game2/game2.js';
+import { memoryGame} from './src/components/game3/game3.js';
 
 
 
