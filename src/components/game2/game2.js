@@ -676,14 +676,14 @@ export const guessWhoGame = (parentDiv) => {
             const tryDivMessage = document.querySelector('#warnings');
             const message = document.createElement('span');
             message.className = "message"; 
-            message.innerHTML = '';
+            tryDivMessage.innerHTML = '';
             // Verificar si el valor es un booleano
             if (typeof feature.valor === "boolean") {
                 message.textContent = `¿Tiene ${feature.atributo}?`;
             } else {
                 message.textContent = `¿Tiene ${feature.atributo} ${feature.valor}?`;
             }  
-            parentDiv.appendChild(tryDivMessage);
+        
             tryDivMessage.appendChild(message) 
            
         }
@@ -784,12 +784,16 @@ const eraseUnavailableFeature = (characters, features) => {
 // CONTADOR DE INTENTOS Y MENSAJE A GANADOR / PERDEDOR
 const congrats = (parentDiv, character, attempt) => {
 
-    const trySpan = document.createElement("span");
-    trySpan.id = "intentos"; 
-    parentDiv.appendChild(trySpan);
+    let trySpan = parentDiv.querySelector("#intentos");
+
+    // Si no existe, lo creamos
+    if (!trySpan) {
+        trySpan = document.createElement("span");
+        trySpan.id = "intentos";
+        parentDiv.appendChild(trySpan);
+    }
   
     let counter = 0;
-
 
     for (const character of characters) { 
         if (character.visible === true) {
@@ -801,15 +805,13 @@ const congrats = (parentDiv, character, attempt) => {
     trySpan.textContent = `QUEDAN ${attempt.intentos} INTENTOS`;
 
     if (counter === 1 && attempt.intentos >= 0) {
-
         warning(parentDiv, `ENHORABUENA! El personaje es "${character.id}"`, character.img)
-        trySpan.innerHTML = "";
+        trySpan.textContent = '';
 
     } else if (counter > 1 && attempt.intentos <= 0) 
     { 
         warning(parentDiv, `ERROR! NO TIENES MÁS INTENTOS! El personaje era "${character.id}". PRUEBA OTRA VEZ!`, character.img)    
     }
-    
 }
    
     
