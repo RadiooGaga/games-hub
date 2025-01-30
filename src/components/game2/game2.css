@@ -101,6 +101,7 @@
     padding: 18px 30px;
     border-radius: 10px;
     border: none;
+
 }
 
 .backToGameButton {
@@ -121,24 +122,32 @@
 
 #intentos {
     position: absolute;
-    top: 6em;
-    background-color: var(--rtc--color-softPink);
+    top: 3em;
+    right: 300px;
+    font-size: 16px;
+    letter-spacing: 1px;
     font-family: var(--rtc--font-family-3);
-    color: black;
-    font-size: 18px;
-    letter-spacing: 2px;
     padding: 8px 18px;
-    border-radius: 10px;
+    background-color: transparent;
+    color: white;
     border: none;
 }
 
+#warnings {
+    position:absolute;
+    top: 6em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+}
+
 .message {
-    position: absolute;
-    top: 9em;
     background-color: rgb(143, 143, 231);
     font-family: var(--rtc--font-family-3);
     color: black;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
     padding: 8px 18px;
     border-radius: 10px;
@@ -206,23 +215,34 @@
         left: 10px;
         position: absolute;
         padding: 5px 8px;
-        top: 5em;
+        top: 3em;
     }
 
     .backToGameButton {
         font-size: 8px;
         position: absolute;
         right: 10px;
-        top: 5em;
+        top: 3em;
         padding: 5px 8px;
     }
 
 
     #intentos {
         position: absolute;
-        top: 9em;
+        top: 7em;
+        right: 10px;
         font-size: 8px;
-        padding: 8px 10px;
+        padding: 5px;
+    }
+
+    #warnings {
+        top: 3.5em;
+    }
+    
+    .message {
+        font-size: 8px;
+        letter-spacing: 2px;
+        padding: 5px 8px;
     }
 
 }
@@ -277,7 +297,7 @@
         position: absolute;
         top: 2.5em;
         left: 1em;
-        padding: 10px 8px;
+        padding: 8px 6px;
     }
 
     .backToGameButton {
@@ -285,18 +305,29 @@
         right: 1em;
         top: 2.5em;
         font-size: 12px;
-        padding: 10px 8px;
+        padding: 8px 6px;
     }
 
     #intentos {
         position: absolute;
         top: 6em;
-        font-size: 12px;
-        padding: 8px 16px;
+        right: 0px;
+        font-size: 10px;
+        padding: 10px 16px;
     }
+
+    #warnings {
+        top: 4em;
+    }
+    
+    .message {
+        font-size: 8px;
+        letter-spacing: 2px;
+        padding: 5px 10px;
+    }
+
   
 }
-  
   
   
 @media screen and (min-width: 769px) and (max-width:1023px){
@@ -362,15 +393,24 @@
 
     #intentos {
         position: absolute;
-        top: 6em;
-        font-size: 14px;
-        padding: 8px 16px;
+        top: 2.5em;
+        right: 110px;
+        font-size: 12px;
+        padding: 10px 16px;
+    }
+
+    #warnings {
+        top: 4.5em;
+    }
+    
+    .message {
+        font-size: 12px;
+        letter-spacing: 2px;
+        padding: 5px 10px;
     }
   
 }
   
-    
-
   
 @media screen and (min-width:1024px) and (max-width:1279px) {
 
@@ -440,9 +480,21 @@
  
     #intentos {
         position: absolute;
-        top: 7em;
-        font-size: 12px;
+        top: 2.5em;
+        right: 150px;
+        font-size: 14px;
         padding: 10px 16px;
+    }
+
+
+    #warnings {
+        top: 5em;
+    }
+    
+    .message {
+        font-size: 12px;
+        letter-spacing: 2px;
+        padding: 5px 10px;
     }
     
 }
@@ -503,9 +555,20 @@
 
     #intentos {
         position: absolute;
-        top: 7em;
-        font-size: 12px;
+        top: 2em;
+        right: 200px;
+        font-size: 16px;
         padding: 10px 16px;
+    }
+
+    #warnings {
+        top: 5em;
+    }
+    
+    .message {
+        font-size: 12px;
+        letter-spacing: 2px;
+        padding: 5px 10px;
     }
 }
 
@@ -572,22 +635,22 @@
 
     #backButton {
         position: absolute;
-        left: 120px;
-        top: 30px;
+        left: 38px;
+        top: 3em;
         font-family: var(--rtc--font-family-2);
         font-size: 18px;
-        padding: 18px 30px;
+        padding: 12px 26px;
         border-radius: 10px;
         border: none;
     }
     
     .backToGameButton {
         position: absolute;
-        right: 120px;
-        top: 30px;
+        right: 38px;
+        top: 3em;
         font-family: var(--rtc--font-family-2);
         font-size: 18px;
-        padding: 18px 30px;
+        padding: 12px 26px;
         border-radius: 10px;
         border: none;
     }
@@ -598,9 +661,20 @@
     
     #intentos {
         position: absolute;
-        top: 6em;
+        top: 4em;
+        right: 200px;
         font-size: 16px;
         padding: 10px 16px;
+    }
+
+    #warnings {
+        top: 5em;
+    }
+    
+    .message {
+        font-size: 16px;
+        letter-spacing: 2px;
+        padding: 5px 10px;
     }
     
 }

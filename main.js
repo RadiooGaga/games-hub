@@ -33,6 +33,7 @@ const games = [
 
 
 
+
 printGamesCards(document.getElementById("gamesDiv"), games);
 
 

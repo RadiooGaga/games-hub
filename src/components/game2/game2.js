@@ -673,6 +673,7 @@ export const guessWhoGame = (parentDiv) => {
                 previousMessage.remove();
             }
 
+            const tryDivMessage = document.querySelector('#warnings');
             const message = document.createElement('span');
             message.className = "message"; 
             message.innerHTML = '';
@@ -682,7 +683,8 @@ export const guessWhoGame = (parentDiv) => {
             } else {
                 message.textContent = `¿Tiene ${feature.atributo} ${feature.valor}?`;
             }  
-            parentDiv.appendChild(message); 
+            parentDiv.appendChild(tryDivMessage);
+            tryDivMessage.appendChild(message) 
            
         }
 
@@ -796,7 +798,7 @@ const congrats = (parentDiv, character, attempt) => {
     }
     
     attempt.intentos -= 1;
-    trySpan.textContent = `TE QUEDAN ${attempt.intentos} INTENTOS`;
+    trySpan.textContent = `QUEDAN ${attempt.intentos} INTENTOS`;
 
     if (counter === 1 && attempt.intentos >= 0) {
 

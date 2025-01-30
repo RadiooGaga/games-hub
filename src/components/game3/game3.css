@@ -96,10 +96,6 @@
 }
 
 
-    
-
-
-
 @media screen and (min-width: 481px) and (max-width:768px){
 
     #memoryGameDiv {
@@ -128,11 +124,10 @@
     }
     
     .divCard {
-        width: 100px;
-        height: 150px;
+        width: 90px;
+        height: 135px;
     }
-  }
-  
+}
   
   
 @media screen and (min-width: 769px) and (max-width:1023px){
@@ -167,7 +162,6 @@
   
 }
 
-
   
 @media screen and (min-width:1024px) and (max-width:1279px) {
 
@@ -188,7 +182,6 @@
     }
 
 }
-  
   
   
 @media screen and (min-width:1280px)and (max-width:1439px)  {
