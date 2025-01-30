@@ -1,19 +1,13 @@
 
 #guessWhoDiv {
     width: 95%;
-    height: auto;
-    position: absolute;
-    top: 7em;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 20px;
-    padding: 10px 10px 30px;
     background-color: var(--rtc--color-softPink);
-    
 }
 
 .people {
@@ -22,11 +16,20 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px 5px 10px 5px;
+    gap: 20px;
+    padding: 20px 20px 10px 20px;
     background-color: var(--rtc--color-softPink);
 }
 
+.people > div {
+    min-width: 0;  
+    width: 100px;
+    height: auto;
+}
+
+.people > div:hover {
+    cursor: pointer;
+}
 
 #atributtes {
     width: 95%;
@@ -39,6 +42,7 @@
     gap: 15px;
     padding: 10px 15px 20px;
     background-color: var(--rtc--color-3);
+    margin-bottom: 20px;
 }
 
 #atributtes > button {
@@ -54,30 +58,44 @@
 #atributtes > button > img {
     width: 100%;
     object-fit: cover;
-    padding: 10px;
+    padding: 5px;
 }
 
 #atributtes > button:hover {
     cursor: pointer;
 }
 
-
-.divWinner > img {
-    width: 10%;
+#guessWhoDiv.divNodoWarning, #guessWhoDiv.divNodoWarning {
+    width: 100%;
+    padding: 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-.divWinnerParagraph {
+.imgNodo {
+    width: 200px;
+    height: auto;
+}
+
+
+.divNodoWarningParagraph {
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     text-align: center;
     font-family: var(--rtc--font-family-2);
-    font-size: 20px;
+    font-size: 18px;
+    padding: 10px;
 }
 
 #backButton {
+    width: auto;
     position: absolute;
-    left: 6em;
-    top: 1em;
+    top: 3em;
+    left: 120px;
     font-family: var(--rtc--font-family-2);
     font-size: 18px;
     padding: 18px 30px;
@@ -86,9 +104,10 @@
 }
 
 .backToGameButton {
+    width: auto;
     position: absolute;
-    right: 6em;
-    top: 1em;
+    top: 3em;
+    right: 120px;
     font-family: var(--rtc--font-family-2);
     font-size: 18px;
     padding: 18px 30px;
@@ -102,12 +121,25 @@
 
 #intentos {
     position: absolute;
-    top: 2em;
-    font-family: var(--rtc--font-family-2);
-    color: black;
+    top: 6em;
     background-color: var(--rtc--color-softPink);
-    letter-spacing: 2px;
+    font-family: var(--rtc--font-family-3);
+    color: black;
     font-size: 18px;
+    letter-spacing: 2px;
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: none;
+}
+
+.message {
+    position: absolute;
+    top: 9em;
+    background-color: rgb(143, 143, 231);
+    font-family: var(--rtc--font-family-3);
+    color: black;
+    font-size: 18px;
+    letter-spacing: 2px;
     padding: 8px 18px;
     border-radius: 10px;
     border: none;
@@ -117,42 +149,32 @@
 
 
 
-
 @media screen and (max-width: 480px) {
 
-
-    #guessWhoDiv {
-        width: 95%;
-        top: 3em;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: start;
-        align-content: center;
-        padding: 5px 5px 20px;
-        gap: 10px;
-        
-    }
-
     .people {
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-        flex-wrap: wrap;
         width: 100%;
         height: auto;
-        padding: 10px 10px 0px;
-        gap: 3px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 10px;
+        background-color: var(--rtc--color-softPink);
     }
 
+    
     .people > div {
-        width: 18%;
+        width: 50px;
+        height: auto;
     }
 
     .people > div > img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
+
+
 
     #atributtes {
         display: flex;
@@ -180,36 +202,25 @@
    
 
     #backButton {
-        font-size: 10px;
+        font-size: 8px;
         left: 10px;
         position: absolute;
-        padding: 8px;
-        top: 1em;
+        padding: 5px 8px;
+        top: 5em;
     }
 
     .backToGameButton {
+        font-size: 8px;
         position: absolute;
         right: 10px;
-        top: 1em;
-        font-size: 10px;
-        padding: 8px;
+        top: 5em;
+        padding: 5px 8px;
     }
 
-
-    .divWinner > img {
-        width: 40%;
-        padding: 10px 10px 20px;
-    }
-
-    .divWinnerParagraph {
-        font-size: 12px;
-        padding: 20px 10px 10px;
-    }
 
     #intentos {
         position: absolute;
-        top: 1.5em;
-        left: 120px;
+        top: 9em;
         font-size: 8px;
         padding: 8px 10px;
     }
@@ -219,42 +230,30 @@
   
 @media screen and (min-width: 481px) and (max-width:768px){
 
-    #guessWhoDiv {
-        width: 95%;
-        top: 3.5em;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: start;
-        align-content: center;
-        padding: 5px 5px 30px;
-        gap: 10px;
-        
-    }
-
     .people {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
+        width: 97%;
         height: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 5px;
-        padding: 15px 5px;
+        padding: 5px;
     }
 
-    .people > div {
-        width: 100px;
+    
+    .people > div { 
+        width: 70px;
+        height: auto;
     }
 
-    .people > div > img {
+    .people > div > img { 
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     #atributtes {
-        width: 95%;
+        width: 97%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -262,12 +261,13 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
-        padding: 15px 10px;
+        padding: 10px 10px 15px;
+        margin-bottom: 10px;
     }
 
     #atributtes > button {
-        width: 47px;
-        height: 47px;
+        width: 40px;
+        height: 40px;
         box-shadow: 7px 5px 5px 3px rgb(134, 79, 87);
     }
    
@@ -275,33 +275,22 @@
     #backButton {
         font-size: 12px;
         position: absolute;
+        top: 2.5em;
+        left: 1em;
         padding: 10px 8px;
-        top: 1em;
-        left: 2em;
     }
 
     .backToGameButton {
         position: absolute;
-        right: 2em;
-        top: 1em;
+        right: 1em;
+        top: 2.5em;
         font-size: 12px;
         padding: 10px 8px;
-        
-    }
-
-    .divWinner > img {
-        width: 30%;
-        padding: 10px 10px 20px;
-    }
-
-    .divWinnerParagraph {
-        font-size: 18px;
-        padding: 20px 10px 10px;
     }
 
     #intentos {
         position: absolute;
-        top: 1em;
+        top: 6em;
         font-size: 12px;
         padding: 8px 16px;
     }
@@ -312,39 +301,28 @@
   
 @media screen and (min-width: 769px) and (max-width:1023px){
 
-    #guessWhoDiv {
-        width: 95%;
-        top: 5em;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        align-items: start;
-        align-content: center;
-        padding: 5px 5px 30px;
-        gap: 10px;
-        
-    }
-
     .people {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
+        width: 95%;
         height: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 10px;
-        padding: 10px 5px;
+        padding: 10px;
     }
 
-    .people > div {
-        width: 93px;
+    
+    .people > div { 
+        width: 70px;
+        height: auto;
     }
 
-    .people > div > img {
+    .people > div > img { 
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
+
 
     #atributtes {
         width: 95%;
@@ -356,6 +334,7 @@
         flex-wrap: wrap;
         gap: 15px;
         padding: 20px;
+        margin-bottom: 20px;
     }
 
     #atributtes > button {
@@ -366,77 +345,54 @@
    
 
     #backButton {
-        font-size: 16px;
+        font-size: 12px;
         position: absolute;
-        padding: 16px 14px;
-        top: 1em;
-        left: 20px;
+        padding: 12px;
+        top: 2em;
+        left: 25px;
     }
 
     .backToGameButton {
         position: absolute;
-        right: 2em;
-        top: 1em;
-        font-size: 16px;
-        padding: 16px 20px;
-        
-    }
-
-    .divWinner > img {
-        width: 15%;
-        padding: 10px 10px 20px;
-    }
-
-    .divWinnerParagraph {
-        font-size: 18px;
-        padding: 20px 10px 10px;
+        right: 25px;
+        top: 2em;
+        font-size: 12px;
+        padding: 12px;  
     }
 
     #intentos {
-        font-size: 16px;
+        position: absolute;
+        top: 6em;
+        font-size: 14px;
+        padding: 8px 16px;
     }
-  
   
 }
   
     
-  
 
   
 @media screen and (min-width:1024px) and (max-width:1279px) {
-  
-    #guessWhoDiv {
-        width: 95%;
-        height: auto;
-        position: absolute;
-        top: 4em;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        gap: 10px;
-        padding: 0px 0px 30px;
-        
-    }
-    
+
     .people {
         width: 100%;
         height: auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        padding: 20px 20px 10px 20px;
+        padding: 10px;
     }
 
     .people > div {
-        width: 90px;
+        width: 85px;  
+        height: auto;
     }
 
     .people > div > img {
-        width: 100%;
+        width: 100%;  
+        height: 100%;
+        object-fit: cover;
     }
     
     #atributtes {
@@ -449,7 +405,7 @@
         flex-wrap: wrap;
         gap: 15px;
         padding: 10px 5px 20px 5px;
-       
+        margin-bottom: 20px; 
     }
     
     #atributtes > button {
@@ -467,69 +423,59 @@
     #backButton {
         position: absolute;
         left: 30px;
-        top: 1em;
-        font-family: var(--rtc--font-family-2);
+        top: 2em;
         font-size: 14px;
-        padding: 14px 26px;
+        padding: 12px;
         
     }
     
     .backToGameButton {
         position: absolute;
         right: 30px;
-        top: 1em;
-        font-family: var(--rtc--font-family-2);
+        top: 2em;
         font-size: 14px;
-        padding: 14px 26px;
+        padding: 10px 12px;
        
     }  
-    .divWinner > img {
-        width: 20%;
-        padding: 10px 10px 20px;
-    }
-
-    .divWinnerParagraph {
-        font-size: 16px;
-        padding: 20px 10px 10px;
-    }
-
+ 
     #intentos {
-        top: 1.5em;
-        font-size: 14px;
+        position: absolute;
+        top: 7em;
+        font-size: 12px;
         padding: 10px 16px;
     }
-  
-      
+    
 }
   
   
   
 @media screen and (min-width:1280px) and (max-width:1439px) {
-  
-    #guessWhoDiv {
-        width: 95%;
-        top: 3.5em;
-        padding: 5px 5px 10px;
-    }
 
     .people {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        padding: 5px 5px 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        gap: 5px;
     }
 
     .people > div {
-        width: 80px;
+        width: 90px;
+        height: auto;
     }
 
     .people > div > img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
+
 
     #atributtes {
         width: 98%;
         padding: 10px 5px 20px 5px;
+        margin-bottom: 20px;
     }
 
     #atributtes > button {
@@ -539,37 +485,126 @@
 
     #backButton {
         position: absolute;
-        left: 40px;
-        top: 0em;
-        font-size: 16px;
-        padding: 12px 20px;
+        left: 35px;
+        top: 2em;
+        font-size: 14px;
+        padding: 10px 12px;
       
     }
 
     .backToGameButton {
         position: absolute;
-        right: 40px;
-        top: 0em;
-        font-size: 16px;
-        padding: 12px 20px;
+        right: 35px;
+        top: 2em;
+        font-size: 14px;
+        padding: 10px 12px;
        
     }
 
-    #divWinner > img {
-        width: 10%;
-        padding: 10px 10px 20px;
+    #intentos {
+        position: absolute;
+        top: 7em;
+        font-size: 12px;
+        padding: 10px 16px;
     }
-
-    .divWinnerParagraph {
-        font-size: 18px;
-        padding: 20px 10px 10px;
-    }
-
-  
 }
 
 
 
+@media screen and (min-width:1440px) and (max-width:1919px) {
+    
+    .people {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .people > div {
+        width: 100px;  
+        height: auto;
+    }
+
+    .people > div > img {
+        width: 100%;  
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    
+    #atributtes {
+        width: 95%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 10px 15px 20px;
+        background-color: var(--rtc--color-3);
+        margin-bottom: 20px;
+    }
+    
+    #atributtes > button {
+        border-radius: 10px;
+        width: 70px;
+        height: 70px;
+        border: none;
+        background-color: white;
+        box-shadow: 9px 7px 5px 3px rgb(134, 79, 87);
+    
+    }
+    
+    #atributtes > button > img {
+        width: 100%;
+        object-fit: cover;
+        padding: 10px;
+    }
+    
+    #atributtes > button:hover {
+        cursor: pointer;
+    }
+    
+
+    #backButton {
+        position: absolute;
+        left: 120px;
+        top: 30px;
+        font-family: var(--rtc--font-family-2);
+        font-size: 18px;
+        padding: 18px 30px;
+        border-radius: 10px;
+        border: none;
+    }
+    
+    .backToGameButton {
+        position: absolute;
+        right: 120px;
+        top: 30px;
+        font-family: var(--rtc--font-family-2);
+        font-size: 18px;
+        padding: 18px 30px;
+        border-radius: 10px;
+        border: none;
+    }
+    
+    #backButton:hover, .backToGameButton:hover {
+        cursor: pointer;
+    }
+    
+    #intentos {
+        position: absolute;
+        top: 6em;
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+    
+}
+    
 
 
   

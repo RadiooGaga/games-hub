@@ -1,11 +1,12 @@
 import "./game2.css";
+import { warning } from "../../tools/tools";
 
 const characters = [
     {
         id: "Alex",
         img: "./assets/characters/Alex1.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
@@ -15,15 +16,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "negro",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Anita",
         img: "./assets/characters/Anita2.jpeg",
         genero: "femenino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "azules",
         nariz: "pequeña",
         boca: "pequeña",
@@ -33,15 +34,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "rubio",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Peter",
         img: "./assets/characters/Peter3.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "azules",
         nariz: "grande",
         boca: "grande",
@@ -51,15 +52,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "blanco",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Eric",
         img: "./assets/characters/Eric4.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
@@ -69,15 +70,15 @@ const characters = [
         sombrero: true,
         gafas: false,
         pelo: "rubio",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Charles",
         img: "./assets/characters/Charles5.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
@@ -87,15 +88,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "rubio",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Sam",
         img: "./assets/characters/Sam6.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -105,15 +106,15 @@ const characters = [
         sombrero: false,
         gafas: true,
         pelo: "blanco",
-        estilo: "liso",
-        calvo: true,
+        cabello: "liso",
+        calva: true,
         visible: true
     },
     {
         id: "Joe",
         img: "./assets/characters/Joe7.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -123,15 +124,15 @@ const characters = [
         sombrero: false,
         gafas: true,
         pelo: "rubio",
-        estilo: "rizado",
-        calvo: false,
+        cabello: "rizado",
+        calva: false,
         visible: true
     },
     {
         id: "Maria",
         img: "./assets/characters/Maria8.jpeg",
         genero: "femenino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -141,15 +142,15 @@ const characters = [
         sombrero: true,
         gafas: false,
         pelo: "castaño",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Phillip",
         img: "./assets/characters/Phillip9.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
@@ -159,15 +160,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "negro",
-        estilo: "rizado",
-        calvo: false,
+        cabello: "rizado",
+        calva: false,
         visible: true
     },
     {
         id: "Richard",
         img: "./assets/characters/Richard10.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -177,33 +178,33 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "castaño",
-        estilo: "liso",
-        calvo: true,
+        cabello: "liso",
+        calva: true,
         visible: true
     },
     {
         id: "Susan",
         img: "./assets/characters/Susan11.jpeg",
         genero: "femenino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
         bigote: false,
-        rubor: false,
+        rubor: true,
         barba: false,
         sombrero: false,
         gafas: false,
         pelo: "blanco",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Max",
         img: "./assets/characters/Max12.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "grande",
         boca: "grande",
@@ -213,15 +214,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "castaño",
-        estilo: "rizado",
-        calvo: false,
+        cabello: "rizado",
+        calva: false,
         visible: true
     },
     {
         id: "Alfred",
         img: "./assets/characters/Alfred13.jpeg",
         genero: "masculino",
-        estado: "triste",
+        cara: "triste",
         ojos: "azules",
         nariz: "pequeña",
         boca: "pequeña",
@@ -231,15 +232,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "pelirrojo",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Robert",
         img: "./assets/characters/Robert14.jpeg",
         genero: "masculino",
-        estado: "triste",
+        cara: "triste",
         ojos: "azules",
         nariz: "grande",
         boca: "grande",
@@ -249,15 +250,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "castaño",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Frans",
         img: "./assets/characters/Frans15.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -267,15 +268,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "pelirrojo",
-        estilo: "rizado",
-        calvo: false,
+        cabello: "rizado",
+        calva: false,
         visible: true
     },
     {
         id: "Claire",
         img: "./assets/characters/Claire16.jpeg",
         genero: "femenino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -285,15 +286,15 @@ const characters = [
         sombrero: true,
         gafas: true,
         pelo: "pelirrojo",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Paul",
         img: "./assets/characters/Paul17.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -303,15 +304,15 @@ const characters = [
         sombrero: false,
         gafas: true,
         pelo: "blanco",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Bill",
         img: "./assets/characters/Bill18.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "pequeña",
@@ -321,15 +322,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "pelirrojo",
-        estilo: "liso",
-        calvo: true,
+        cabello: "liso",
+        calva: true,
         visible: true
     },
     {
         id: "David",
         img: "./assets/characters/David19.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
@@ -339,15 +340,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "rubio",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Bernard",
         img: "./assets/characters/Bernard20.jpeg",
         genero: "masculino",
-        estado: "triste",
+        cara: "triste",
         ojos: "marrones",
         nariz: "grande",
         boca: "pequeña",
@@ -357,15 +358,15 @@ const characters = [
         sombrero: true,
         gafas: false,
         pelo: "castaño",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "George",
         img: "./assets/characters/George21.jpeg",
         genero: "masculino",
-        estado: "triste",
+        cara: "triste",
         ojos: "marrones",
         nariz: "pequeña",
         boca: "grande",
@@ -375,15 +376,15 @@ const characters = [
         sombrero: true,
         gafas: false,
         pelo: "blanco",
-        estilo: "liso",
-        calvo: false,
+        cabello: "liso",
+        calva: false,
         visible: true
     },
     {
         id: "Tom",
         img: "./assets/characters/Tom22.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "azules",
         nariz: "pequeña",
         boca: "pequeña",
@@ -393,15 +394,15 @@ const characters = [
         sombrero: false,
         gafas: true,
         pelo: "negro",
-        estilo: "liso",
-        calvo: true,
+        cabello: "liso",
+        calva: true,
         visible: true
     },
     {
         id: "Herman",
         img: "./assets/characters/Herman23.jpeg",
         genero: "masculino",
-        estado: "feliz",
+        cara: "feliz",
         ojos: "marrones",
         nariz: "grande",
         boca: "pequeña",
@@ -411,15 +412,15 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "pelirrojo",
-        estilo: "rizado",
-        calvo: true,
+        cabello: "rizado",
+        calva: true,
         visible: true
     },
     {
         id: "Anne",
         img: "./assets/characters/Anne24.jpeg",
         genero: "femenino",
-        estado: "triste",
+        cara: "triste",
         ojos: "marrones",
         nariz: "grande",
         boca: "pequeña",
@@ -429,8 +430,8 @@ const characters = [
         sombrero: false,
         gafas: false,
         pelo: "negro",
-        estilo: "rizado",
-        calvo: false,
+        cabello: "rizado",
+        calva: false,
         visible: true
     }
 ]
@@ -453,14 +454,14 @@ const features = [
     },
     {
         id: 2,
-        atributo: "estado",
+        atributo: "cara",
         valor: "feliz",
         img: "./assets/atributos/feliz.png"
 
     },
     {
         id: 3,
-        atributo: "estado",
+        atributo: "cara",
         valor: "triste",
         img: "./assets/atributos/triste.png"
 
@@ -579,21 +580,21 @@ const features = [
     },
     {
         id: 20,
-        atributo: "estilo",
+        atributo: "cabello",
         valor: "rizado",
         img: "./assets/atributos/rizado.png"
 
     },
     {
         id: 21,
-        atributo: "estilo",
+        atributo: "cabello",
         valor: "liso",
         img: "./assets/atributos/liso.png"
 
     },
     {
         id: 22,
-        atributo: "calvo",
+        atributo: "calva",
         valor: true,
         img: "./assets/atributos/calvo.jpeg"
 
@@ -601,8 +602,6 @@ const features = [
 ]
 
 const attempt = {intentos: 0};
-
-
 
 
 // CREANDO QUIEN ES QUIEN
@@ -615,12 +614,15 @@ export const guessWhoGame = (parentDiv) => {
     const atributtes = document.createElement("div");
     atributtes.id = "atributtes";
     parentDiv.appendChild(guessWhoDiv);
-    const chosenCharacter = characters[Math.floor(Math.random() * characters.length)] //personaje random
 
-    
-   attempt.intentos = 5; //reinicio de contador libre.
+
+    const chosenCharacter = characters[Math.floor(Math.random() * characters.length)] //personaje random
+    //console.log('el personaje oculto es', chosenCharacter.id )
+
+    attempt.intentos = 5; //contador de intentos desde 5
 
     for (const character of characters) { 
+
         character.visible = true;
         const characterDiv = document.createElement("div");
         characterDiv.id = character.id;
@@ -629,11 +631,26 @@ export const guessWhoGame = (parentDiv) => {
 
         guessWhoDiv.appendChild(people);
         people.appendChild(characterDiv);
-        characterDiv.appendChild(characterImg); 
+        characterDiv.appendChild(characterImg);
+
+        const characterButtonClickHandler = () => {
+            if ( chosenCharacter.id === character.id && character.visible === true ) {
+                warning(parentDiv, `HAS ACERTADO! El personaje es "${character.id}"!`, character.img)   
+            } else if (chosenCharacter.id !== character.id && character.visible === true){
+                warning(parentDiv, `HAS PERDIDO! El personaje NO es "${character.id}"!`, character.img)
+            }
+        }
+        //si no hay personajes visibles, no se puede clicar en ellos
+        if (character.visible === false) {
+            characterDiv.style.pointerEvents = 'none';
+        }
+        
+        characterDiv.onclick = characterButtonClickHandler;
     }
 
 
-    for (const feature of features) { //rasgos
+    for (const feature of features) { 
+        //rasgos
     
         const featureButton = document.createElement("button");
         featureButton.id = feature.id;
@@ -650,9 +667,27 @@ export const guessWhoGame = (parentDiv) => {
             featureButton.removeEventListener("click", featureButtonClickHandler);
             eraseUnavailableFeature(characters, features);
             congrats(parentDiv,chosenCharacter, attempt);
-            
+
+            const previousMessage = parentDiv.querySelector('.message');
+            if (previousMessage) {
+                previousMessage.remove();
+            }
+
+            const message = document.createElement('span');
+            message.className = "message"; 
+            message.innerHTML = '';
+            // Verificar si el valor es un booleano
+            if (typeof feature.valor === "boolean") {
+                message.textContent = `¿Tiene ${feature.atributo}?`;
+            } else {
+                message.textContent = `¿Tiene ${feature.atributo} ${feature.valor}?`;
+            }  
+            parentDiv.appendChild(message); 
+           
         }
+
         featureButton.onclick = featureButtonClickHandler;
+        
     }  
 }
 
@@ -693,7 +728,7 @@ const eraseUnavailableFeature = (characters, features) => {
 
     const listOfAtributes = { 
         genero: [],
-        estado: [],
+        cara: [],
         ojos: [],
         nariz: [],
         boca: [],
@@ -703,7 +738,7 @@ const eraseUnavailableFeature = (characters, features) => {
         sombrero: [],
         gafas: [],
         pelo: [],
-        estilo: [],
+        cabello: [],
         calvo: []
     }
     const newListOfAtributes = Object.keys(listOfAtributes); 
@@ -717,9 +752,12 @@ const eraseUnavailableFeature = (characters, features) => {
                 //console.log(character[atribute])
                 //console.log(listOfAtributes[atribute])
             }
+        } else {
+            const eraseCharacter = document.getElementById(character.id);
+            eraseCharacter.style.cursor = 'not-allowed';
         }
-    } //Si el personaje es visible, recorremos los atributos y añadimos el personaje con 
-     //los atributos coincidentes a la nueva lista.
+    } /* Si el personaje es visible, recorremos los atributos y añadimos el personaje con 
+     los atributos coincidentes a la nueva lista. */
 
     
     for (const atribute of newListOfAtributes) { 
@@ -728,6 +766,7 @@ const eraseUnavailableFeature = (characters, features) => {
                 if (feature.atributo === atribute) {
                     const eraseFeature = document.getElementById(feature.id);
                     eraseFeature.style.filter = "opacity(30%)";
+                    eraseFeature.style.cursor = 'not-allowed';
                     eraseFeature.onclick = null; /* se inhabilitan los que están
                     en gris para que no cuenten como punto adicional si se pulsan
                     por accidente */
@@ -740,7 +779,6 @@ const eraseUnavailableFeature = (characters, features) => {
 
 
 
-
 // CONTADOR DE INTENTOS Y MENSAJE A GANADOR / PERDEDOR
 const congrats = (parentDiv, character, attempt) => {
 
@@ -748,8 +786,8 @@ const congrats = (parentDiv, character, attempt) => {
     trySpan.id = "intentos"; 
     parentDiv.appendChild(trySpan);
   
-    
     let counter = 0;
+
 
     for (const character of characters) { 
         if (character.visible === true) {
@@ -761,35 +799,13 @@ const congrats = (parentDiv, character, attempt) => {
     trySpan.textContent = `TE QUEDAN ${attempt.intentos} INTENTOS`;
 
     if (counter === 1 && attempt.intentos >= 0) {
-        const divWinner = document.getElementById("guessWhoDiv");
-        divWinner.innerHTML = "";
+
+        warning(parentDiv, `ENHORABUENA! El personaje es "${character.id}"`, character.img)
         trySpan.innerHTML = "";
-        trySpan.textContent = `TE QUEDAN ${attempt.intentos} INTENTOS`;
-        divWinner.classList.add("divWinner");
-        const divWinnerP = document.createElement("p");
-        divWinnerP.className = "divWinnerParagraph";
-        divWinnerP.textContent = `ENHORABUENA! El personaje es "${character.id}"`;
-        const imgWinner = document.createElement("img");
-        imgWinner.src = character.img;
 
-        parentDiv.appendChild(divWinner);
-        divWinner.appendChild(divWinnerP);
-        divWinner.appendChild(imgWinner);
-    
-
-    } else if (counter > 1 && attempt.intentos <= 0)
-    
-    {
-        const divWinner = document.getElementById("guessWhoDiv");
-        divWinner.innerHTML = "";
-        divWinner.classList.add("divWinner");
-        const divWinnerP = document.createElement("p");
-        divWinnerP.className = "divWinnerParagraph";
-        divWinnerP.textContent = `HAS PERDIDO! INTÉNTALO OTRA VEZ!`;
-
-        parentDiv.appendChild(divWinner);
-        divWinner.appendChild(divWinnerP);
-        
+    } else if (counter > 1 && attempt.intentos <= 0) 
+    { 
+        warning(parentDiv, `ERROR! NO TIENES MÁS INTENTOS! El personaje era "${character.id}". PRUEBA OTRA VEZ!`, character.img)    
     }
     
 }

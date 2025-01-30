@@ -1,18 +1,12 @@
 #memoryGameDiv {
-    width: 95%;
+    width: 90%;
     height: auto;
-    position: absolute;
-    top: 6em;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    gap: 20px;
-    padding: 10px 10px 30px;
-    background-color:var(--rtc--color-3);
-    
+    background-color:var(--rtc--color-3);  
 }
 
 #divPoints {
@@ -45,8 +39,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 20px 5px 20px 5px;
+    gap: 20px;
+    padding: 10px;
     background-color: var(--rtc--color-softPink);
 }
 
@@ -63,8 +57,8 @@
 }
 
 #pic {
-    width: 160px;
-    height: 240px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -90,21 +84,14 @@
     }
 
     #divCards {
-        justify-content: space-evenly;
-        gap: 10px;
-        padding: 10px 5px 20px 5px;
-        
-    }
-    
-    .divCard {
-        width: 70px;
-        height: 100px;
+        gap: 5px;
+        padding: 10px 5px 10px 5px;
     }
 
-    #pic {
-        width: 70px;
+    
+    .divCard {
+        width: 68px;
         height: 100px;
-        object-fit: cover;
     }
 }
 
@@ -120,6 +107,12 @@
         gap: 0px;
     }
 
+    #divPoints {
+        width: 100%;
+        height: 30px;
+        padding-bottom: 15px;
+    }
+
     #pointsSpan {
         padding: 5px;
         font-family: var(--rtc--font-family-2);
@@ -129,32 +122,30 @@
 
     #divCards {
         justify-content: space-evenly;
-        gap: 10px;
-        padding: 20px 5px 20px 5px;
+        gap: 5px;
+        padding: 10px;
         
     }
-    
     
     .divCard {
         width: 100px;
         height: 150px;
     }
-
-    #pic {
-        width: 120px;
-        height: 170px;
-        object-fit: cover;
-    }
-   
   }
   
   
   
-  @media screen and (min-width: 769px) and (max-width:1023px){
+@media screen and (min-width: 769px) and (max-width:1023px){
 
     #memoryGameDiv {
         top: 5em;
         gap: 0px;
+    }
+
+    #divPoints {
+        width: 100%;
+        height: 30px;
+        padding-bottom: 15px;
     }
 
     #pointsSpan {
@@ -166,65 +157,60 @@
     #divCards {
         justify-content: center;
         gap: 10px;
-        padding: 20px 5px 20px 5px;
+        padding: 10px 5px;
     }
     
     .divCard {
-        width: 130px;
-        height: 170px;
-    }
-
-    #pic {
-        width: 130px;
-        height: 170px;
-        object-fit: cover;
+        width: 90px;
+        height: 130px;
     }
   
-  }
+}
 
 
   
-  @media screen and (min-width:1024px) and (max-width:1279px) {
-
-    #memoryGameDiv {
-        top: 4.5em;
-        gap: 0px;
-    }
-  
-    .divCard {
-        width: 130px;
-        height: 190px;
-    }
-
-    #pic {
-        width: 130px;
-        height: 190px;
-        object-fit: cover;
-    }
-
-    
-
-  }
-  
-  
-  
-  @media screen and (min-width:1280px)and (max-width:1439px)  {
+@media screen and (min-width:1024px) and (max-width:1279px) {
 
     #memoryGameDiv {
         top: 3.5em;
         gap: 0px;
     }
 
-    .divCard {
-        width: 130px;
-        height:200px;
+    #divCards {
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 5px;
     }
-
-    #pic {
-        width: 130px;
-        height: 200px;
-        object-fit: cover;
-    }
-
   
-  }
+    .divCard {
+        width: 105px;
+        height: 175px;
+    }
+
+}
+  
+  
+  
+@media screen and (min-width:1280px)and (max-width:1439px)  {
+
+    #memoryGameDiv {
+        top: 2.5em;
+        gap: 0px;
+    }
+
+    .divCard {
+        width: 110px;
+        height:180px;
+    }
+  
+}
+
+
+@media screen and (min-width:1440px)and (max-width:1919px)  {
+    
+    .divCard {
+        width: 120px;
+        height: 200px;
+    }
+
+}

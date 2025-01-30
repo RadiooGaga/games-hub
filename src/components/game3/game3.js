@@ -2,7 +2,7 @@ import "./game3.css";
 
 
 let chosenCategory = "cats";
-const options = ["cats", "dogs", "animals", "toy"];
+const options = ["cats", "dogs", "animals", "toy", "fruits"];
 
 
 
@@ -10,8 +10,8 @@ const callApiCollection = async (categoria)=> {
 
     let id = "74vRF6e1l9a6WTlt7b7Nh9VT5zqNeqK-APQEnqePUHo";
     let url = `https://api.unsplash.com/search/photos?query=${categoria}&per_page=8&client_id=${id}`;
-    console.log(categoria)
-    console.log(url)
+    //console.log(categoria)
+    //console.log(url)
     const options = {
         method: 'GET' };
         try {
@@ -51,37 +51,38 @@ export const memoryGame = (parentDiv) => {
     puntuacion = 0;
     collection = callApiCollection(chosenCategory)
     
-
     const memoryGameDiv = document.createElement("div");
     memoryGameDiv.id = "memoryGameDiv";
     const divPoints = document.createElement("div");
     divPoints.id = "divPoints";
-    const selectDiv = document.createElement("select");
-    selectDiv.className = "selectDiv";
-
-    for (const option of options) {
-        const selectOption = document.createElement("option");
-        selectOption.textContent = option;
-        selectOption.value = option;
-        selectDiv.appendChild(selectOption);
-  
-      }
-    selectDiv.value = chosenCategory;
-
-
-    selectDiv.addEventListener("change", () => {
-        chosenCategory = selectDiv.value;
-        memoryGameDiv.innerHTML = "";
-        memoryGame(parentDiv);
-        
-    }) 
-
-
     const pointsSpan = document.createElement("span");
     pointsSpan.id = "pointsSpan";
     pointsSpan.textContent = `Puntuación:` + " " + puntuacion;
     const divCards = document.createElement("div");
     divCards.id = "divCards";
+
+    const selectDiv = document.createElement("select");
+    selectDiv.className = "selectDiv";
+
+    for (const option of options) {
+      
+      const selectOption = document.createElement("option");
+      selectOption.textContent = option;
+      selectOption.value = option;
+      selectDiv.appendChild(selectOption);
+  
+    }
+    selectDiv.value = chosenCategory;
+
+
+    selectDiv.addEventListener("change", () => {
+        chosenCategory = selectDiv.value;
+        const existingGameDiv = document.querySelector("#memoryGameDiv");
+        if (existingGameDiv) {
+            existingGameDiv.remove();
+        }
+        memoryGame(parentDiv);  
+    })
     
 
     parentDiv.appendChild(memoryGameDiv);

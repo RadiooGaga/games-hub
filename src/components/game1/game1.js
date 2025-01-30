@@ -8,8 +8,7 @@ const randomWord = () => {
     return randomWords[randomIndex];
 }
   
-  // Llamada de ejemplo
-  console.log(randomWord());
+  //console.log(randomWord());
 
 
   let selectedWord;
@@ -123,7 +122,7 @@ const printWord = (parentDiv, incompleteWord) => {
         parentDiv.appendChild(uniqueLetter);
     }
 }
-  
+
   
 // comprobar en la palabra si coincide con el indexOf del abecedario pulsada
 const guessLetter = (selectedWord, pressedLetter, incompleteWord) => {

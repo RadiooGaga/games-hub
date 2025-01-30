@@ -1,4 +1,4 @@
-
+import './tools.css'
 
 // PINTAR LAS TARJETAS DEL MENU
 
@@ -71,3 +71,26 @@ const resetGame = (parentDiv, game, games) => {
    
 }
 
+
+// CONGRATS/FAILED BUTTON 
+
+export const warning = (parentDiv, text, img) => {
+
+    const nodo = document.getElementById("guessWhoDiv");
+    nodo.innerHTML = "";
+    nodo.classList.add("divNodoWarning");
+    const nodoP = document.createElement("p");
+    nodoP.className = "divNodoWarningParagraph";
+    nodoP.textContent = text, img;
+
+    if (img) {
+        const imgNodo = document.createElement("img");
+        imgNodo.src = img;
+        imgNodo.className = 'imgNodo';
+        nodo.appendChild(imgNodo);
+    }
+
+    parentDiv.appendChild(nodo);
+    nodo.appendChild(nodoP);
+    
+}
