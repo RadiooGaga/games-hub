@@ -666,7 +666,7 @@ export const guessWhoGame = (parentDiv) => {
             checkCharacter(characters, feature.atributo, feature.valor, chosenCharacter);
             featureButton.removeEventListener("click", featureButtonClickHandler);
             eraseUnavailableFeature(characters, features);
-            congrats(parentDiv,chosenCharacter, attempt);
+
 
             const previousMessage = parentDiv.querySelector('.message');
             if (previousMessage) {
@@ -685,7 +685,7 @@ export const guessWhoGame = (parentDiv) => {
             }  
         
             tryDivMessage.appendChild(message) 
-           
+            congrats(parentDiv, chosenCharacter,attempt, tryDivMessage)
         }
 
         featureButton.onclick = featureButtonClickHandler;
@@ -782,7 +782,7 @@ const eraseUnavailableFeature = (characters, features) => {
 
 
 // CONTADOR DE INTENTOS Y MENSAJE A GANADOR / PERDEDOR
-const congrats = (parentDiv, character, attempt) => {
+const congrats = (parentDiv, character, attempt, tryMessage) => {
 
     let trySpan = parentDiv.querySelector("#intentos");
 
@@ -805,11 +805,14 @@ const congrats = (parentDiv, character, attempt) => {
     trySpan.textContent = `QUEDAN ${attempt.intentos} INTENTOS`;
 
     if (counter === 1 && attempt.intentos >= 0) {
+        trySpan.innerHTML = '';
+        tryMessage.innerHTML = '';
         warning(parentDiv, `ENHORABUENA! El personaje es "${character.id}"`, character.img)
-        trySpan.textContent = '';
+        
 
     } else if (counter > 1 && attempt.intentos <= 0) 
     { 
+        tryMessage.innerHTML = '';
         warning(parentDiv, `ERROR! NO TIENES MÁS INTENTOS! El personaje era "${character.id}". PRUEBA OTRA VEZ!`, character.img)    
     }
 }
